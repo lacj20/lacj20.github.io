@@ -34,7 +34,7 @@ Esta documentación es abierta para todo el equipo. Si notas que algo se puede m
 * Comunicación
   * [Guía de slack](general/slack.md)
 * Auronix University
-  * [Curso SQL](auronixuniversity/cursosql/estructuraindice.md)
+  * [Curso SQL](auronixuniversity/cursosql/estructuraindice.html)
 
 ## Contribuir
 
