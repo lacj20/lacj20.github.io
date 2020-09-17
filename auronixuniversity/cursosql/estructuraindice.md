@@ -120,7 +120,9 @@ Es importante resaltar que el uso del índice nos reduce significativamente el c
         position:absolute;
         left:-20px;
         top:15px;
-    }
+        border:none !important;
+        box-shadow:none !important;
+        margin:0px !important;    }
     .main-content{
         max-width:90% !important;
         margin:0 auto !important;
