@@ -110,6 +110,7 @@ Es importante resaltar que el uso del índice nos reduce significativamente el c
     }
     .wrapper{
         width:100% !important;
+        float:none !important;
 
     }
         .wrapper header, .wrapper footer
@@ -158,7 +159,7 @@ Es importante resaltar que el uso del índice nos reduce significativamente el c
         width:100%;
     }
     .resumen{
-        width:90%;
+        width:95%;
         margin:0px auto;
         /*background:#ebf3fc;*/
         background:#000;
