@@ -1,4 +1,4 @@
-<div class="encabezado">
+<div class="titulo-h1">
     <h1>Auronix University</h1>
 </div>
 # Estructura de los índices
@@ -125,7 +125,7 @@ Es importante resaltar que el uso del índice nos reduce significativamente el c
         z-index:100;
 
     }
-    .encabezado h1,.encabezado h3{
+    .titulo-h1{
         color:white !important;
         border:none !important;
         margin:0 !important;
