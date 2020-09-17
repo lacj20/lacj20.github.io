@@ -50,7 +50,7 @@ La *figura 1.2* muestra la estructura de índices creada con un BTree, la lista 
 5.	Nota que las tres llaves en el nodo hijo `[67, 83, 83]` están en el rango `[57, 83]` es decir, están contenidas en el intervalo que forman su llave representante `[83]` y la llave representante anterior `[57]`. Este orden en las llaves y los nodos se mantiene en toda la estructura.
 
 6.	La profundidad (la distancia desde el nodo raíz a su nodo hoja más lejano) en cualquier hoja del árbol es la misma, esto asegura que buscar una llave específica siempre tardará un tiempo logarítmico. [Veáse análisis de complejidad](analisis-complejidad.md).
-<div style="width:90%;margin:0px auto;background:#ebf3fc;padding:1em;border-radius:10px;text-align:justify;box-shadow:0px 0px 5px gray;position:relative;padding-left:25px;">
+<div style="width:95%;margin:0px auto;background:#ebf3fc;padding:1em;border-radius:10px;text-align:justify;box-shadow:0px 0px 5px gray;position:relative;padding-left:25px;">
 <img src="imagenes/idea.png" style="width:40px;position:absolute;left:-20px;top:15px;">
 En resumen un BTree es una estructura de <em>árbol de búsqueda equilibrado</em> que mantiene su profundidad al mínimo posible, esta propiedad permite que todas las operaciones sean logarítmicas, esto quiere decir que son aceptablemente rápidas. Los manejadores de bases de datos que utilizan BTree para el ínidice, mantienen automáticamente la estructura cuando se aplican operaciones de <strong><em>insert</em></strong>, <strong><em>delete</em></strong> y <strong><em>update</em></strong>.
 </div>
