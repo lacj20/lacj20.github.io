@@ -49,7 +49,7 @@ La *figura 1.2* muestra la estructura de índices creada con un BTree, la lista 
 - Es de grado cuatro, es decir, el máximo número de hijos que puede tener un nodo es cuatro, en la *figura 1.3* podemos observar el nodo `[46, 53, 57, 83]` que tomaremos como nodo ejemplo, se dice que es de grado cuatro porque tiene cuatro hijos: **H1**, **H2**, **H3** y **H4**.
 
 <div class="img-centrada">
-    <img src="imagenes/estructuraNodo.png">
+    <img src="imagenes/estructuraNodo.png"><br/>
     <strong>Figura 1.3. Estructura de un nodo en el BTree</strong>
 </div>
 
