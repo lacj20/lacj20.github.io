@@ -1,3 +1,6 @@
+<div class="encabezado">
+    <h1>Auronix University</h1>
+</div>
 # Estructura de los índices
 
 {:.justificado}
@@ -97,9 +100,17 @@ Es importante resaltar que el uso del índice nos reduce significativamente el c
 </div>
 
 <style>
-    .wrapper header
+    .wrapper header, .wrapper footer
     {
         background-color:blue !important;
+    }
+    .wrapper section{
+        width:100% !important;
+        padding:0 2em !important;
+    }
+    .encabezado{
+        background-color:black;
+        color:white;
     }
     .justificado{
         text-align:justify;
@@ -134,12 +145,5 @@ Es importante resaltar que el uso del índice nos reduce significativamente el c
         margin:0px !important;  
         padding:2px;  
     }
-    #main_content{
-        max-width:90% !important;
-        margin:0 auto !important;
-    }
-    #main_content_wrap{
-        max-width:100% !important;
-        margin:0 auto !important;
-    }
+    
 </style>
