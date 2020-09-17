@@ -122,13 +122,14 @@ Es importante resaltar que el uso del índice nos reduce significativamente el c
         top:15px;
         border:none !important;
         box-shadow:none !important;
-        margin:0px !important;    
+        margin:0px !important;  
+        padding:2px;  
     }
     .main-content{
         max-width:90% !important;
         margin:0 auto !important;
     }
-    #main_content{
+    #main_content_wrap{
         max-width:90% !important;
         margin:0 auto !important;
     }
