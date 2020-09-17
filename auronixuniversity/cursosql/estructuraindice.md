@@ -67,6 +67,7 @@ La *figura 1.2* muestra la estructura de índices creada con un BTree, la lista 
 </div>
 
 ## Recorrido del índice BTree ##
+
 {:.justificado}
 Los recorridos en un árbol siempre inician desde el nodo raíz, y dependiendo del criterio de búsqueda, se desciende a través de sus nodos ramas hasta llegar a un nodo hoja. En el caso del BTree que estmos tomando como ejemplo, las operaciones de selección, inserción y borrado, siguen este patrón de búsqueda para eficientar el tiempo de ejecución en las consultas (Siempre que se indexe correctamente). 
 
