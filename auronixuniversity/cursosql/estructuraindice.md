@@ -9,14 +9,18 @@ Un índice se crea a través del comando <code>create index</code>, requiere de 
 {:.justificado}
 Buscar dentro de un almacén de datos indexado, es como buscar una entrada en un directorio telefónico. La base de su funcionalidad requiere una correcta <em>estructura ordenada</em> de modo que este orden sirva para clasificar y determinar la posición de cada elemento lo más rápido y optimizado que se pueda, sin embargo, un índice en una BD es algo más complejo que un directorio telefónico debido a que constantemente está siendo modificado por operaciones de inserción, borrado o incluso actualización. Estas operaciones deben hacerse rápidamente conservando el orden y sin mover grandes cantidades de datos.
 
+{:.justificado}
 Claramente, un índice de BD es un desafío que, para nuestra fortuna, el motor de BD ya resuelve, no obstante, es imperativo que los desarrolladores conozcan tanto su estructura como su comportamiento.
 
+{:.justificado}
 La BD puede implementar dos tipos de índices, uno llamado [BTREE](btree.md) basado en las estructuras de datos [LISTA DOBLEMENTE ENLAZADA](lista-doble.md) y [ÁRBOL B](arbol-b.md), y el segundo tipo de índice a través de un HASH. Los índices de tipo btree son adecuados para consultas que usan operadores de relación y de rango, tales como <code> <, >, =, <> y between</code>, mientras que los de tipo hash son funcionales cuando las consultas usan únicamente operadores de igualdad exacta <code>=</code>, cabe mencionar que el índice de tipo hash puede presentar colisiones, suele ser más lento que btree en consultas que involucran rangos y no puede emplearse la cláusula <code>orden by</code> con ellos. En el caso particular de MySQL, se usan los índices de tipo btree, y por este motivo profundizaremos más en estos.
 
 ## Nodos hoja en un BTREE
 
+{:.justificado}
 Para entender paulatinamente la estructura interna y funcionamiento de los índices btree, es recomendable iniciar su análisis por los nodos hoja. El propósito de un índice es proporcionar una representación ordenada de los datos, sin embargo, no es posible almacenar datos de forma secuencial debido que una operación de `insert` tendría que mover grandes cantidades de datos provocando consumo excesivo de tiempo y lentitud en la ejecución. Este problema se soluciona usando una estructura que mantenga un orden lógico independiente del orden físico de los datos, esta estructura de datos se llama lista doblemente enlazada donde la ubicación física de los nuevos nodos que se insertan no tiene importancia debido al orden lógico que la estructura mantiene. Como esta estructura mantiene una referencia al nodo anterior y al siguiente, la BD puede leer el índice hacia adelante o hacia atrás según sea necesario. Además, la inserción o eliminación de un nodo no requiere que se muevan grandes cantidades de datos ya que solo se requiere actualizar los apuntadores.
 
+{:.justificado}
 Específicamente, los índices BTree utilizan una lista doblemente enlazada para apuntar los nodos hoja, cada nodo hoja se almacena en un bloque dentro de la BD, a este bloque también se le conoce como página y suele tener un tamaño de algunos kilobytes. El orden del índice se mantiene en dos niveles diferentes, los registros del índice que llevan a los nodos hoja y los nodos hoja interconectados entre sí por medio de una lista doblemente enlazada.
 
 <div style="text-align:center;margin:2em 1em;">
@@ -24,10 +28,12 @@ Específicamente, los índices BTree utilizan una lista doblemente enlazada para
     <strong>Figura 1.1. La conexión entre los nodos hoja y los registros de la tabla.</strong>
 </div>
 
+{:.justificado}
 La *figura 1.1* muestra la conexión que existe entre los nodos hoja (parte izquierda) y los registros de la tabla (parte derecha), nota que la tabla fue indexada por la columna 2, de modo que este campo es el que se toma en cuenta para construir los nodos hoja del índice, cada entrada en uno de la lista enlazada consta de al menos dos campos, la llave y un campo especial llamado rowid cuyo objetivo es referenciar la dirección física donde se encuentra almacenado el registro. A diferencia del índice, los datos de la tabla están almacenados en una estructura que no está ordenada, no existe relación entre los registros almacenados en el mismo bloque de la tabla, ni existen conexiones entre los bloques.
 
 ## Árbol de búsqueda BTREE
 
+{:.justificado}
 Para almacenar los índices, la BD hace uso de un [árbol de búsqueda equilibrado](arbol-busqueda-equilibrado.md), específicamente un BTree, esta estructura implementa nodos donde almacena información para encontrar rápidamente un nodo hoja en la lista enlazada, regularmente el tiempo para encontrar un nodo es logarítmico, se usa el mismo principio de la [búsqueda binaria](busqueda.binaria), iniciando en la raíz del árbol y descendiendo por sus ramas hasta los nodos hoja, escogiendo en el recorrido los subnodos de las ramas de acuerdo a la posición relativa del valor buscado respecto a los valores de cada nodo. Considere el siguiente ejemplo de un árbol de índices BTree.
 
 <div style="text-align:center;margin:2em 1em;">
@@ -35,16 +41,16 @@ Para almacenar los índices, la BD hace uso de un [árbol de búsqueda equilibra
     <strong>Figura 1.2. Estructura de un BTree.</strong>
 </div>
 
+{:.justificado}
 La *figura 1.2* muestra la estructura de índices creada con un BTree, la lista doblemente enlazada establece el orden lógico entre los nodos hoja mientras la raíz y sus ramas permiten hacer búsquedas rápidas entre los nodos hoja. Para ponerlo de una forma más clara consideremos los siguientes puntos sobre el ejemplo en la figura:
 
 1. Es un BTree que se ha construido con 30 registros.
 
 2. Es de grado cuatro, es decir, el máximo número de hijos que puede tener un nodo es cuatro, en la *figura 1.3* podemos observar el nodo `[46, 53, 57, 83]` que tomaremos como nodo ejemplo, se dice que es de grado cuatro porque tiene cuatro hijos: **H1**, **H2**, **H3** y **H4**.
 
-<div style="text-align:center;margin:2em 1em;">
-    <img src="imagenes/estructuraNodo.png"/><br/>
-    <strong>Figura 1.3. Estructura de un nodo en el BTree</strong>
-</div>
+{:.img-centrada}
+![Estructura de un nodo](imagenes/estructuraNodo.png)
+<strong>Figura 1.3. Estructura de un nodo en el BTree</strong>
 
 3.	Las llaves que se agrupan en un nodo siempre están ordenadas de menor a mayor.
 
@@ -84,5 +90,9 @@ El índice BTree nos permite encontrar registros rápidamente
 <style>
     .justificado{
         text-align:justify;
+    }
+    .img-centrada{
+        text-align:center;
+        margin:2em 1em;
     }
 </style>
