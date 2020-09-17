@@ -102,11 +102,15 @@ Es importante resaltar que el uso del índice nos reduce significativamente el c
 
 
 <style>
+    *{
+        box-sizing:border-box;    
+    }
     body{
         padding:0px !important;
     }
     .wrapper{
         width:100% !important;
+
     }
         .wrapper header, .wrapper footer
     {
