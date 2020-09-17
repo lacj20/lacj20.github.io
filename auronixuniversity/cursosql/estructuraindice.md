@@ -47,6 +47,7 @@ Para almacenar los índices, la BD hace uso de un [árbol de búsqueda equilibra
 {:.justificado}
 La *figura 1.2* muestra la estructura de índices creada con un BTree, la lista doblemente enlazada establece el orden lógico entre los nodos hoja mientras la raíz y sus ramas permiten hacer búsquedas rápidas entre los nodos hoja. Para ponerlo de una forma más clara consideremos los siguientes puntos sobre el ejemplo en la figura:
 
+{:.justificado}
 - Es un BTree que se ha construido con 30 registros.
 
 - Es de grado cuatro, es decir, el máximo número de hijos que puede tener un nodo es cuatro, en la *figura 1.3* podemos observar el nodo `[46, 53, 57, 83]` que tomaremos como nodo ejemplo, se dice que es de grado cuatro porque tiene cuatro hijos: **H1**, **H2**, **H3** y **H4**.
@@ -104,7 +105,7 @@ Es importante resaltar que el uso del índice nos reduce significativamente el c
 En matemáticas, el logaritmo base *b* de un número *N* equivale a pensar a que potencia se eleva *b* para alcanzar *N*, es decir $b^{x}=N$, donde $x=log_{b}(N)$. Si pensamos en nuestro BTree de ejemplo [Figura 1.2](#f2) podemos hacer algunos cálculos pertinentes e interesantes:
 
 {:.justificado}
-1. Sea $b$ el grado del árbol ($b=4$) y $x$ su profundidad o altura ($x=3$), entonces $4^3=64$, este resultado representa el ***número máximo de llaves que el árbol puede representar***, en nueestro ejemplo, el BTree podrá representar hasta *64* registros.
+1. Sea $$b$$ el grado del árbol ($$b=4$$) y $$x$$ su profundidad o altura ($$x=3$$), entonces $$4^3=64$$, este resultado representa el ***número máximo de llaves que el árbol puede representar***, en nueestro ejemplo, el BTree podrá representar hasta *64* registros.
 
 2. Si se aumentara la profundidad del árbol en $1$ entonces, $b=4$ y $x=4$, por lo tanto, $4^4=256$, la cantidad de registros que el árbol puede representar incrementa considerablemente, si seguimos este ejercicio hasta llegar a una profundidad de $10$ el número máximo de registros representados en el árbol es $4^{10}=1,048,576$ llaves de registros.
 
