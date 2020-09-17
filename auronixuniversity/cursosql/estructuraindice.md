@@ -118,10 +118,16 @@ Es importante resaltar que el uso del índice nos reduce significativamente el c
     }
     .wrapper section{
         width:90% !important;
-        padding:0 2em !important;
+        padding:0 0.5em !important;
         margin:0px auto;
         margin-top:80px;
 
+    }
+    @media print, screen and (max-width: 720px)
+    {
+        .wrapper section{
+            margin-top:120px;
+        }
     }
     .encabezado{
         background-color:black;
