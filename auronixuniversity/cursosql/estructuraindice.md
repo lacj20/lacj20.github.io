@@ -44,26 +44,26 @@ Para almacenar los índices, la BD hace uso de un [árbol de búsqueda equilibra
 {:.justificado}
 La *figura 1.2* muestra la estructura de índices creada con un BTree, la lista doblemente enlazada establece el orden lógico entre los nodos hoja mientras la raíz y sus ramas permiten hacer búsquedas rápidas entre los nodos hoja. Para ponerlo de una forma más clara consideremos los siguientes puntos sobre el ejemplo en la figura:
 
-1. Es un BTree que se ha construido con 30 registros.
+- Es un BTree que se ha construido con 30 registros.
 
-2. Es de grado cuatro, es decir, el máximo número de hijos que puede tener un nodo es cuatro, en la *figura 1.3* podemos observar el nodo `[46, 53, 57, 83]` que tomaremos como nodo ejemplo, se dice que es de grado cuatro porque tiene cuatro hijos: **H1**, **H2**, **H3** y **H4**.
+- Es de grado cuatro, es decir, el máximo número de hijos que puede tener un nodo es cuatro, en la *figura 1.3* podemos observar el nodo `[46, 53, 57, 83]` que tomaremos como nodo ejemplo, se dice que es de grado cuatro porque tiene cuatro hijos: **H1**, **H2**, **H3** y **H4**.
 
-{:.img-centrada}
-![Estructura de un nodo](imagenes/estructuraNodo.png)
+<div class="img-centrada">
+    <img src="imagenes/estructuraNodo.png">
+    <strong>Figura 1.3. Estructura de un nodo en el BTree</strong>
+</div>
 
-{:.img-centrada}
-<strong>Figura 1.3. Estructura de un nodo en el BTree</strong>
+-	Las llaves que se agrupan en un nodo siempre están ordenadas de menor a mayor.
 
-3.	Las llaves que se agrupan en un nodo siempre están ordenadas de menor a mayor.
+-	Cada llave almacenada en el nodo, representa a un nodo hijo, esta llave representante es en realidad el valor más grande del nodo hijo al que apunta. En el nodo ejemplo la llave `83`, <code>[46, 53, 57, **83**]</code>, apunta al 4to. hijo, un nodo hoja que contiene las llaves <code>[67, 83, **83**]</code>, observa que el número mayor de este subconjunto representa al nodo.
 
-4.	Cada llave almacenada en el nodo, representa a un nodo hijo, esta llave representante es en realidad el valor más grande del nodo hijo al que apunta. En el nodo ejemplo la llave `83`, <code>[46, 53, 57, **83**]</code>, apunta al 4to. hijo, un nodo hoja que contiene las llaves <code>[67, 83, **83**]</code>, observa que el número mayor de este subconjunto representa al nodo.
+-	Nota que las tres llaves en el nodo hijo `[67, 83, 83]` están en el rango `[57, 83]` es decir, están contenidas en el intervalo que forman su llave representante `[83]` y la llave representante anterior `[57]`. Este orden en las llaves y los nodos se mantiene en toda la estructura.
 
-5.	Nota que las tres llaves en el nodo hijo `[67, 83, 83]` están en el rango `[57, 83]` es decir, están contenidas en el intervalo que forman su llave representante `[83]` y la llave representante anterior `[57]`. Este orden en las llaves y los nodos se mantiene en toda la estructura.
+-	La profundidad (la distancia desde el nodo raíz a su nodo hoja más lejano) en cualquier hoja del árbol es la misma, esto asegura que buscar una llave específica siempre tardará un tiempo logarítmico. [Veáse análisis de complejidad](analisis-complejidad.md).
 
-6.	La profundidad (la distancia desde el nodo raíz a su nodo hoja más lejano) en cualquier hoja del árbol es la misma, esto asegura que buscar una llave específica siempre tardará un tiempo logarítmico. [Veáse análisis de complejidad](analisis-complejidad.md).
-<div style="width:100%;margin:0px auto;background:#ebf3fc;padding:1em;border-radius:10px;text-align:justify;box-shadow:0px 0px 5px gray;position:relative;padding-left:25px;">
-<img src="imagenes/idea.png" style="width:40px;position:absolute;left:-20px;top:15px;">
-En resumen un BTree es una estructura de <em>árbol de búsqueda equilibrado</em> que mantiene su profundidad al mínimo posible, esta propiedad permite que todas las operaciones sean logarítmicas, esto quiere decir que son aceptablemente rápidas. Los manejadores de bases de datos que utilizan BTree para el ínidice, mantienen automáticamente la estructura cuando se aplican operaciones de <strong><em>insert</em></strong>, <strong><em>delete</em></strong> y <strong><em>update</em></strong>.
+<div class="resumen">
+    <img src="imagenes/idea.png">
+    En resumen un BTree es una estructura de <em>árbol de búsqueda equilibrado</em> que mantiene su profundidad al mínimo posible, esta propiedad permite que todas las operaciones sean logarítmicas, esto quiere decir que son aceptablemente rápidas. Los manejadores de bases de datos que utilizan BTree para el ínidice, mantienen automáticamente la estructura cuando se aplican operaciones de <strong><em>insert</em></strong>, <strong><em>delete</em></strong> y <strong><em>update</em></strong>.
 </div>
 
 ## Recorrido del índice BTree ##
@@ -96,5 +96,22 @@ El índice BTree nos permite encontrar registros rápidamente
     .img-centrada{
         text-align:center;
         margin:2em 1em;
+    }
+    .resumen{
+        width:95%;
+        margin:0px auto;
+        background:#ebf3fc;
+        padding:1em;
+        border-radius:10px;
+        text-align:justify;
+        box-shadow:0px 0px 5px gray;
+        position:relative;
+        padding-left:25px;
+    }
+    .resumen img{
+        width:40px;
+        position:absolute;
+        left:-20px;
+        top:15px;
     }
 </style>
