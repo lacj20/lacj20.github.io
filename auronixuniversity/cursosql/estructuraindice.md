@@ -97,7 +97,7 @@ Es importante resaltar que el uso del índice nos reduce significativamente el c
 </div>
 
 <style>
-    .wrapper header
+    .wrapper header, .wrapper footer
     {
         display:none !important;
     }
