@@ -50,6 +50,8 @@ La *figura 1.2* muestra la estructura de índices creada con un BTree, la lista 
 
 {:.img-centrada}
 ![Estructura de un nodo](imagenes/estructuraNodo.png)
+
+{:.img-centrada}
 <strong>Figura 1.3. Estructura de un nodo en el BTree</strong>
 
 3.	Las llaves que se agrupan en un nodo siempre están ordenadas de menor a mayor.
