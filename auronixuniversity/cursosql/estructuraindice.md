@@ -103,6 +103,7 @@ Es importante resaltar que el uso del índice nos reduce significativamente el c
     .img-centrada{
         text-align:center;
         margin:2em 1em;
+        width:100%;
     }
     .resumen{
         width:90%;
