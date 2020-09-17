@@ -1,6 +1,6 @@
 # Estructura de los índices
 
-<div class="text-justify">
+<div style='text-align:justify'>
 
 La función principal de un índice en una base de datos relacional es acelerar la ejecución de las sentencias SQL, el objetivo del presente material no es tener la conceptualización superflua de cómo trabaja un índice, en realidad, lo que se quiere es profundizar hasta donde sea necesario para lograr entender los aspectos a tomar en consideración cuando se trata de optimizar las consultas SQL.
 
