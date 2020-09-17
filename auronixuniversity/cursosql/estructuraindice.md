@@ -111,6 +111,15 @@ Es importante resaltar que el uso del índice nos reduce significativamente el c
     .encabezado{
         background-color:black;
         color:white;
+        position:fixed;
+        width:100%;
+        margin:0 0;
+        left:0px;
+        top:0px;
+
+    }
+    .encabezado h1{
+        color:white;
     }
     .justificado{
         text-align:justify;
