@@ -105,7 +105,7 @@ Es importante resaltar que el uso del índice nos reduce significativamente el c
         margin:2em 1em;
     }
     .resumen{
-        width:95%;
+        width:90%;
         margin:0px auto;
         background:#ebf3fc;
         padding:1em;
