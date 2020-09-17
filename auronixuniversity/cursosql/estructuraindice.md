@@ -57,6 +57,7 @@ La *figura 1.2* muestra la estructura de índices creada con un BTree, la lista 
     <strong>Figura 1.3. Estructura de un nodo en el BTree</strong>
 </div>
 
+{:.justificado}
 -	Las llaves que se agrupan en un nodo siempre están ordenadas de menor a mayor.
 
 -	Cada llave almacenada en el nodo, representa a un nodo hijo, esta llave representante es en realidad el valor más grande del nodo hijo al que apunta. En el nodo ejemplo la llave `83`, <code>[46, 53, 57, <b>83</b>]</code>, apunta al 4to. hijo, un nodo hoja que contiene las llaves <code>[67, 83, <b>83</b>]</code>, observa que el número mayor de este subconjunto representa al nodo.
@@ -110,6 +111,8 @@ En matemáticas, el logaritmo base *b* de un número *N* equivale a pensar a que
 2. Si se aumentara la profundidad del árbol en $1$ entonces, $b=4$ y $x=4$, por lo tanto, $4^4=256$, la cantidad de registros que el árbol puede representar incrementa considerablemente, si seguimos este ejercicio hasta llegar a una profundidad de $10$ el número máximo de registros representados en el árbol es $4^{10}=1,048,576$ llaves de registros.
 
 3. Otro cálculo pertinente es el costo de encontrar una llave en el árbol y está dado por $costo=log_b(N)$, donde $b$ representa el grado del árbol y $N$ el total de llaves en el árbol. Para nuestro caso ejemplo, el costo promedio de encontrar una llave es $log_4(64)=3$, lo que significa que solo tendremos que visitar en promedio $3$ nodos para encontrar un dato. El número total de comparaciones que se hacen no es exactamente $3$, para ser exactos, es al menos $3$, recuerda que dentro de un nodo, hay varias llaves ordenadas de menor a mayor, y se tienen que hacer comparaciones dento del nodo para elegir la llave correcta, sin embargo, conforme crece el volumen de datos y se minimiza el grado del árbol, este dato es despreciable porque en relidad no suma considerablemente al costo total. En análisis de complejidad, a este exceso despreciable se le conoce como costo constante y no suele expresarse en la complejidad total del sistema, es por esto que hablando de complejidad, comunmente escucharás el término costo promedio.
+
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
 <style>
     *{
