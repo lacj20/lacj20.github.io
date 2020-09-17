@@ -126,10 +126,10 @@ Es importante resaltar que el uso del índice nos reduce significativamente el c
 
     }
     .encabezado h1,.encabezado h3{
-        color:white;
-        border:none;
-        margin:0;
-        padding:15px;
+        color:white !important;
+        border:none !important;
+        margin:0 !important;
+        padding:15px !important;
     }
     .justificado{
         text-align:justify;
