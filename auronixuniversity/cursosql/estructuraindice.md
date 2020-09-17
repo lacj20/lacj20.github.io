@@ -87,7 +87,7 @@ La ilustración muestra un fragmento del BTree en análisis, cuando la BD recibe
 Es importante resaltar que el uso del índice nos reduce significativamente el costo de encontrar un registro, si analizas detenidamente la *figura 1.4*, solo se consultaron cinco de las treinta llaves para encontrar el nodo hoja que apunta a la ubicación real del registro. A groso modo podemos decir que el costo de encontrar la llave en este ejemplo es igual a 5, sin tomar en cuenta el costo del acceso a disco que la BD tiene que hacer para devolver los datos solicitados del registro en cuestión. 
 <div class="resumen">
     <img src="imagenes/idea.png">
-    El índice BTree nos permite encontrar registros rápidamente
+    El índice BTree nos permite encontrar registros rápidamente, recuerda entender la arquitectura y recorrido de los índices nos asegura que las búsquedas tengan un costo en tiempo logarítmico.
 </div>
 
 <style>
@@ -99,7 +99,7 @@ Es importante resaltar que el uso del índice nos reduce significativamente el c
         margin:2em 1em;
     }
     .resumen{
-        width:95%;
+        width:100%;
         margin:0px auto;
         background:#ebf3fc;
         padding:1em;
