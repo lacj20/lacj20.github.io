@@ -23,7 +23,7 @@ Para entender paulatinamente la estructura interna y funcionamiento de los índi
 {:.justificado}
 Específicamente, los índices BTree utilizan una lista doblemente enlazada para apuntar los nodos hoja, cada nodo hoja se almacena en un bloque dentro de la BD, a este bloque también se le conoce como página y suele tener un tamaño de algunos kilobytes. El orden del índice se mantiene en dos niveles diferentes, los registros del índice que llevan a los nodos hoja y los nodos hoja interconectados entre sí por medio de una lista doblemente enlazada.
 
-<div style="text-align:center;margin:2em 1em;">
+<div class="img-centrada">
     <img src="imagenes/nodoshoja.png"/><br/>
     <strong>Figura 1.1. La conexión entre los nodos hoja y los registros de la tabla.</strong>
 </div>
@@ -36,7 +36,7 @@ La *figura 1.1* muestra la conexión que existe entre los nodos hoja (parte izqu
 {:.justificado}
 Para almacenar los índices, la BD hace uso de un [árbol de búsqueda equilibrado](arbol-busqueda-equilibrado.md), específicamente un BTree, esta estructura implementa nodos donde almacena información para encontrar rápidamente un nodo hoja en la lista enlazada, regularmente el tiempo para encontrar un nodo es logarítmico, se usa el mismo principio de la [búsqueda binaria](busqueda.binaria), iniciando en la raíz del árbol y descendiendo por sus ramas hasta los nodos hoja, escogiendo en el recorrido los subnodos de las ramas de acuerdo a la posición relativa del valor buscado respecto a los valores de cada nodo. Considere el siguiente ejemplo de un árbol de índices BTree.
 
-<div style="text-align:center;margin:2em 1em;">
+<div class="img-centrada">
     <img id="f2" src="imagenes/estructuraBTree.png"/><br/>
     <strong>Figura 1.2. Estructura de un BTree.</strong>
 </div>
