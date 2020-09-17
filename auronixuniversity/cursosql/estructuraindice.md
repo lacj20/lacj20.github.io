@@ -102,7 +102,7 @@ Es importante resaltar que el uso del índice nos reduce significativamente el c
 <style>
     .wrapper header, .wrapper footer
     {
-        background-color:blue !important;
+        display:none !important;
     }
     .wrapper section{
         width:100% !important;
