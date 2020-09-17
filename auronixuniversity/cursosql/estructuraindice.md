@@ -55,7 +55,7 @@ La *figura 1.2* muestra la estructura de índices creada con un BTree, la lista 
 
 -	Las llaves que se agrupan en un nodo siempre están ordenadas de menor a mayor.
 
--	Cada llave almacenada en el nodo, representa a un nodo hijo, esta llave representante es en realidad el valor más grande del nodo hijo al que apunta. En el nodo ejemplo la llave `83`, <code>[46, 53, 57, **83**]</code>, apunta al 4to. hijo, un nodo hoja que contiene las llaves <code>[67, 83, **83**]</code>, observa que el número mayor de este subconjunto representa al nodo.
+-	Cada llave almacenada en el nodo, representa a un nodo hijo, esta llave representante es en realidad el valor más grande del nodo hijo al que apunta. En el nodo ejemplo la llave `83`, <code>[46, 53, 57, <b>83</b>]</code>, apunta al 4to. hijo, un nodo hoja que contiene las llaves <code>[67, 83, <b>83</b>]</code>, observa que el número mayor de este subconjunto representa al nodo.
 
 -	Nota que las tres llaves en el nodo hijo `[67, 83, 83]` están en el rango `[57, 83]` es decir, están contenidas en el intervalo que forman su llave representante `[83]` y la llave representante anterior `[57]`. Este orden en las llaves y los nodos se mantiene en toda la estructura.
 
@@ -82,7 +82,7 @@ Suponiendo que la *Tabla* está indexada sobre la *columna 2*, la *figura 1.4* m
     <strong>Figura 1.4. Recorrido del índice BTree.</strong>
 </div>
 
-La ilustración muestra un fragmento del BTree en análisis, cuando la BD recibe la consulta, hace uso del índice para encontrar la llave que coincida con el criterio de búsqueda, en este caso `57`. El recorrido del árbol inicia desde el nodo raíz `[39, 83, 98]`, Se procesan las entradas en orden ascendente hasta encontrar un valor `>=` al valor buscado `57`, en este ejemplo se encuentra el valor `83`, esta llave hace referencia a un nodo en el siguiente nivel del árbol <code>[46, 53, 57, ***83***]</code>, sobre este nodo rama se repite el proceso encontrando el valor `57` y tomando la referencia para saltar al siguiente nivel del árbol, específicamente en el nodo hoja que contiene la llave que estamos buscando `[55, 57, 57]`, recordemos que los nodos hoja guardan la llave y la dirección donde está almacenado el regitro asociado, entonces, para cada entrada de este nodo que coincida con la llave buscada se devuelve un registro, en este caso obtendriamos dos registros asociados a la llave `57`. 
+La ilustración muestra un fragmento del BTree en análisis, cuando la BD recibe la consulta, hace uso del índice para encontrar la llave que coincida con el criterio de búsqueda, en este caso `57`. El recorrido del árbol inicia desde el nodo raíz `[39, 83, 98]`, Se procesan las entradas en orden ascendente hasta encontrar un valor `>=` al valor buscado `57`, en este ejemplo se encuentra el valor `83`, esta llave hace referencia a un nodo en el siguiente nivel del árbol <code>[46, 53, 57, <b>83</b>]</code>, sobre este nodo rama se repite el proceso encontrando el valor `57` y tomando la referencia para saltar al siguiente nivel del árbol, específicamente en el nodo hoja que contiene la llave que estamos buscando `[55, 57, 57]`, recordemos que los nodos hoja guardan la llave y la dirección donde está almacenado el regitro asociado, entonces, para cada entrada de este nodo que coincida con la llave buscada se devuelve un registro, en este caso obtendriamos dos registros asociados a la llave `57`. 
 
 Es importante resaltar que el uso del índice nos reduce significativamente el costo de encontrar un registro, si analizas detenidamente la *figura 1.4*, solo se consultaron cinco de las treinta llaves para encontrar el nodo hoja que apunta a la ubicación real del registro. A groso modo podemos decir que el costo de encontrar la llave en este ejemplo es igual a 5, sin tomar en cuenta el costo del acceso a disco que la BD tiene que hacer para devolver los datos solicitados del registro en cuestión. 
 <div style="background:#ebf3fc;padding:1em;border-radius:10px;text-align:justify">
@@ -116,5 +116,6 @@ El índice BTree nos permite encontrar registros rápidamente
     }
     .main-content{
         max-width:90% !important;
+        margin:0 auto !important;
     }
 </style>
