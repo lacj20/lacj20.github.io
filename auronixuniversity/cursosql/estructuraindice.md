@@ -1,7 +1,7 @@
-<div class="titulo-h1">
-    <h1>Auronix University</h1>
+<div class="encabezado">
+    <h1 class="titulo-h1">Auronix University</h1>
 </div>
-# Estructura de los índices
+# Estructura de los índicesss
 
 {:.justificado}
 La función principal de un índice en una base de datos relacional es acelerar la ejecución de las sentencias SQL, el objetivo del presente material no es tener la conceptualización superflua de cómo trabaja un índice, en realidad, lo que se quiere es profundizar hasta donde sea necesario para lograr entender los aspectos a tomar en consideración cuando se trata de optimizar las consultas SQL.
