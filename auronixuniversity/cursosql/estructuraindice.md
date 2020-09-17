@@ -114,4 +114,7 @@ El índice BTree nos permite encontrar registros rápidamente
         left:-20px;
         top:15px;
     }
+    .main-content{
+        width:90% !important;
+    }
 </style>
