@@ -105,7 +105,7 @@ Es importante resaltar que el uso del índice nos reduce significativamente el c
         margin:2em 1em;
     }
     .resumen{
-        width:100%;
+        width:95%;
         margin:0px auto;
         background:#ebf3fc;
         padding:1em;
@@ -125,12 +125,12 @@ Es importante resaltar que el uso del índice nos reduce significativamente el c
         margin:0px !important;  
         padding:2px;  
     }
-    .main-content{
-        max-width:90% !important;
+    #main-content{
+        max-width:95% !important;
         margin:0 auto !important;
     }
     #main_content_wrap{
-        max-width:90% !important;
+        max-width:100% !important;
         margin:0 auto !important;
     }
 </style>
