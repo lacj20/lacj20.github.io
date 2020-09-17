@@ -1,11 +1,12 @@
 # Estructura de los índices
 
 {:.justificado}
-
 La función principal de un índice en una base de datos relacional es acelerar la ejecución de las sentencias SQL, el objetivo del presente material no es tener la conceptualización superflua de cómo trabaja un índice, en realidad, lo que se quiere es profundizar hasta donde sea necesario para lograr entender los aspectos a tomar en consideración cuando se trata de optimizar las consultas SQL.
 
+{:.justificado}
 Un índice se crea a través del comando <code>create index</code>, requiere de un espacio en disco y contiene una copia parcial de los datos en la tabla. Análogamente un índice de BD se parece mucho al índice de un libro, ocupa su propio espacio, es redundante y hace referencia a la información almacenada en otro lugar.
 
+{:.justificado}
 Buscar dentro de un almacén de datos indexado, es como buscar una entrada en un directorio telefónico. La base de su funcionalidad requiere una correcta <em>estructura ordenada</em> de modo que este orden sirva para clasificar y determinar la posición de cada elemento lo más rápido y optimizado que se pueda, sin embargo, un índice en una BD es algo más complejo que un directorio telefónico debido a que constantemente está siendo modificado por operaciones de inserción, borrado o incluso actualización. Estas operaciones deben hacerse rápidamente conservando el orden y sin mover grandes cantidades de datos.
 
 Claramente, un índice de BD es un desafío que, para nuestra fortuna, el motor de BD ya resuelve, no obstante, es imperativo que los desarrolladores conozcan tanto su estructura como su comportamiento.
