@@ -1,7 +1,7 @@
 <div class="encabezado">
-    <h1 class="titulo-h1">Auronix University</h1>
+    <h1 class="titulo-h1">Auronix University | <em>Curso SQL</em></h1>
 </div>
-# Estructura de los índicesss
+# Estructura de los índices
 
 {:.justificado}
 La función principal de un índice en una base de datos relacional es acelerar la ejecución de las sentencias SQL, el objetivo del presente material no es tener la conceptualización superflua de cómo trabaja un índice, en realidad, lo que se quiere es profundizar hasta donde sea necesario para lograr entender los aspectos a tomar en consideración cuando se trata de optimizar las consultas SQL.
@@ -99,11 +99,16 @@ Es importante resaltar que el uso del índice nos reduce significativamente el c
     El índice BTree nos permite encontrar registros rápidamente, recuerda que entender la arquitectura y recorrido de los índices nos asegura que las búsquedas tengan un costo en tiempo logarítmico.
 </div>
 
+
+
 <style>
+    body{
+        padding:0px !important;
+    }
     .wrapper{
         width:100% !important;
     }
-    .wrapper header, .wrapper footer
+        .wrapper header, .wrapper footer
     {
         display:none !important;
     }
