@@ -126,7 +126,7 @@ Es importante resaltar que el uso del índice nos reduce significativamente el c
         padding:2px;  
     }
     #main_content{
-        max-width:95% !important;
+        max-width:90% !important;
         margin:0 auto !important;
     }
     #main_content_wrap{
