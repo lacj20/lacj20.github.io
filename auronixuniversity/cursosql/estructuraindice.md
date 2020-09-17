@@ -100,13 +100,19 @@ Es importante resaltar que el uso del índice nos reduce significativamente el c
 </div>
 
 <style>
+    .wrapper{
+        width:100% !important;
+    }
     .wrapper header, .wrapper footer
     {
         display:none !important;
     }
     .wrapper section{
-        width:100% !important;
+        width:90% !important;
         padding:0 2em !important;
+        margin:0px auto;
+        margin-top:80px;
+
     }
     .encabezado{
         background-color:black;
@@ -116,10 +122,14 @@ Es importante resaltar que el uso del índice nos reduce significativamente el c
         margin:0 0;
         left:0px;
         top:0px;
+        z-index:100;
 
     }
-    .encabezado h1{
+    .encabezado h1,.encabezado h3{
         color:white;
+        border:none;
+        margin:0;
+        padding:15px;
     }
     .justificado{
         text-align:justify;
