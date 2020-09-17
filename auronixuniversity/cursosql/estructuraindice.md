@@ -1,6 +1,6 @@
 # Estructura de los índices
 
-<div style='text-align:justify'>
+{:.justificado}
 
 La función principal de un índice en una base de datos relacional es acelerar la ejecución de las sentencias SQL, el objetivo del presente material no es tener la conceptualización superflua de cómo trabaja un índice, en realidad, lo que se quiere es profundizar hasta donde sea necesario para lograr entender los aspectos a tomar en consideración cuando se trata de optimizar las consultas SQL.
 
@@ -13,8 +13,6 @@ Buscar dentro de un almacén de datos indexado, es como buscar una entrada en un
 Claramente, un índice de BD es un desafío que, para nuestra fortuna, el motor de BD ya resuelve, no obstante, es imperativo que los desarrolladores conozcan tanto su estructura como su comportamiento.
 <br/><br/>
 La BD puede implementar dos tipos de índices, uno llamado [BTREE](btree.md) basado en las estructuras de datos [LISTA DOBLEMENTE ENLAZADA](lista-doble.md) y [ÁRBOL B](arbol-b.md), y el segundo tipo de índice a través de un HASH. Los índices de tipo btree son adecuados para consultas que usan operadores de relación y de rango, tales como <code> <, >, =, <> y between</code>, mientras que los de tipo hash son funcionales cuando las consultas usan únicamente operadores de igualdad exacta <code>=</code>, cabe mencionar que el índice de tipo hash puede presentar colisiones, suele ser más lento que btree en consultas que involucran rangos y no puede emplearse la cláusula <code>orden by</code> con ellos. En el caso particular de MySQL, se usan los índices de tipo btree, y por este motivo profundizaremos más en estos.
-
-</div>
 
 ## Nodos hoja en un BTREE
 
@@ -83,3 +81,9 @@ Es importante resaltar que el uso del índice nos reduce significativamente el c
 <div style="background:#ebf3fc;padding:1em;border-radius:10px;text-align:justify">
 El índice BTree nos permite encontrar registros rápidamente
 </div>
+
+<style>
+    .justificado{
+        text-align:center;
+    }
+</style>
