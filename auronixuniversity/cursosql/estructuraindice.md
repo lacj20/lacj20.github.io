@@ -67,27 +67,32 @@ La *figura 1.2* muestra la estructura de índices creada con un BTree, la lista 
 </div>
 
 ## Recorrido del índice BTree ##
-
+{:.justificado}
 Los recorridos en un árbol siempre inician desde el nodo raíz, y dependiendo del criterio de búsqueda, se desciende a través de sus nodos ramas hasta llegar a un nodo hoja. En el caso del BTree que estmos tomando como ejemplo, las operaciones de selección, inserción y borrado, siguen este patrón de búsqueda para eficientar el tiempo de ejecución en las consultas (Siempre que se indexe correctamente). 
 
+{:.justificado}
 Analicemos el recorrido en el índice para buscar una llave en el BTree que estamos tomando como ejemplo [Vea figura 1.2](#f2), Si nos enfocamos en buscar la llave **`57`** con la consulta SQL:
 
 ``` SQL
 Select * from Tabla where columna2=57
 ```
+{:.justificado}
 Suponiendo que la *Tabla* está indexada sobre la *columna 2*, la *figura 1.4* muestra el recorrido del BTree que administra el índice.
 
-<div style="text-align:center;margin:2em 1em;">
+<div class="img-centrada">
     <img src="imagenes/recorridoBtree.png" /><br/>
     <strong>Figura 1.4. Recorrido del índice BTree.</strong>
 </div>
 
+{:.justificado}
 La ilustración muestra un fragmento del BTree en análisis, cuando la BD recibe la consulta, hace uso del índice para encontrar la llave que coincida con el criterio de búsqueda, en este caso `57`. El recorrido del árbol inicia desde el nodo raíz `[39, 83, 98]`, Se procesan las entradas en orden ascendente hasta encontrar un valor `>=` al valor buscado `57`, en este ejemplo se encuentra el valor `83`, esta llave hace referencia a un nodo en el siguiente nivel del árbol <code>[46, 53, 57, <b>83</b>]</code>, sobre este nodo rama se repite el proceso encontrando el valor `57` y tomando la referencia para saltar al siguiente nivel del árbol, específicamente en el nodo hoja que contiene la llave que estamos buscando `[55, 57, 57]`, recordemos que los nodos hoja guardan la llave y la dirección donde está almacenado el regitro asociado, entonces, para cada entrada de este nodo que coincida con la llave buscada se devuelve un registro, en este caso obtendriamos dos registros asociados a la llave `57`. 
 
+{:.justificado}
 Es importante resaltar que el uso del índice nos reduce significativamente el costo de encontrar un registro, si analizas detenidamente la *figura 1.4*, solo se consultaron cinco de las treinta llaves para encontrar el nodo hoja que apunta a la ubicación real del registro. A groso modo podemos decir que el costo de encontrar la llave en este ejemplo es igual a 5, sin tomar en cuenta el costo del acceso a disco que la BD tiene que hacer para devolver los datos solicitados del registro en cuestión. 
+
 <div class="resumen">
     <img src="imagenes/idea.png">
-    El índice BTree nos permite encontrar registros rápidamente, recuerda entender la arquitectura y recorrido de los índices nos asegura que las búsquedas tengan un costo en tiempo logarítmico.
+    El índice BTree nos permite encontrar registros rápidamente, recuerda que entender la arquitectura y recorrido de los índices nos asegura que las búsquedas tengan un costo en tiempo logarítmico.
 </div>
 
 <style>
