@@ -126,7 +126,8 @@ Es importante resaltar que el uso del índice nos reduce significativamente el c
     @media print, screen and (max-width: 720px)
     {
         .wrapper section{
-            margin-top:120px;
+            margin-top:120px !important;
+            background-color:white;
         }
     }
     .encabezado{
