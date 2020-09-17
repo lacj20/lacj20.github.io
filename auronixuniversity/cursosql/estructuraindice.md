@@ -103,14 +103,21 @@ Es importante resaltar que el uso del índice nos reduce significativamente el c
 
 ## Complejidad logarítmica de un BTree ##
 
-En matemáticas, el logaritmo base *b* de un número *N* equivale a pensar a que potencia se eleva *b* para alcanzar *N*, es decir $b^{x}=N$, donde $x=log_{b}(N)$. Si pensamos en nuestro BTree de ejemplo [Figura 1.2](#f2) podemos hacer algunos cálculos pertinentes e interesantes:
+En matemáticas, el logaritmo base *b* de un número *N* equivale a pensar a que potencia se eleva *b* para alcanzar *N*, es decir $$b^{x}=N$$, donde $$x=log_{b}(N)$$. Si pensamos en nuestro BTree de ejemplo [Figura 1.2](#f2) podemos hacer algunos cálculos pertinentes e interesantes:
 
 {:.justificado}
 1. Sea $$b$$ el grado del árbol ($$b=4$$) y $$x$$ su profundidad o altura ($$x=3$$), entonces $$4^3=64$$, este resultado representa el ***número máximo de llaves que el árbol puede representar***, en nueestro ejemplo, el BTree podrá representar hasta *64* registros.
 
-2. Si se aumentara la profundidad del árbol en $1$ entonces, $b=4$ y $x=4$, por lo tanto, $4^4=256$, la cantidad de registros que el árbol puede representar incrementa considerablemente, si seguimos este ejercicio hasta llegar a una profundidad de $10$ el número máximo de registros representados en el árbol es $4^{10}=1,048,576$ llaves de registros.
+2. Si se aumentara la profundidad del árbol en $$1$$ entonces, $$b=4$$ y $$x=4$$, por lo tanto, $$4^4=256$$, la cantidad de registros que el árbol puede representar incrementa considerablemente, si seguimos este ejercicio hasta llegar a una profundidad de $$10$$ el número máximo de registros representados en el árbol es $$4^{10}=1,048,576$$ llaves de registros.
 
-3. Otro cálculo pertinente es el costo de encontrar una llave en el árbol y está dado por $costo=log_b(N)$, donde $b$ representa el grado del árbol y $N$ el total de llaves en el árbol. Para nuestro caso ejemplo, el costo promedio de encontrar una llave es $log_4(64)=3$, lo que significa que solo tendremos que visitar en promedio $3$ nodos para encontrar un dato. El número total de comparaciones que se hacen no es exactamente $3$, para ser exactos, es al menos $3$, recuerda que dentro de un nodo, hay varias llaves ordenadas de menor a mayor, y se tienen que hacer comparaciones dento del nodo para elegir la llave correcta, sin embargo, conforme crece el volumen de datos y se minimiza el grado del árbol, este dato es despreciable porque en relidad no suma considerablemente al costo total. En análisis de complejidad, a este exceso despreciable se le conoce como costo constante y no suele expresarse en la complejidad total del sistema, es por esto que hablando de complejidad, comunmente escucharás el término costo promedio.
+3. Otro cálculo pertinente es el costo de encontrar una llave en el árbol y está dado por $$costo=log_b(N)$$, donde $$b$$ representa el grado del árbol y $$N$$ el total de llaves en el árbol. Para nuestro caso ejemplo, el costo promedio de encontrar una llave es $$log_4(64)=3$$, lo que significa que solo tendremos que visitar en promedio $$3$$ nodos para encontrar un dato. El número total de comparaciones que se hacen no es exactamente $$3$$, para ser exactos, es al menos $$3$$, recuerda que dentro de un nodo, hay varias llaves ordenadas de menor a mayor, y se tienen que hacer comparaciones dento del nodo para elegir la llave correcta, sin embargo, conforme crece el volumen de datos y se minimiza el grado del árbol, este dato es despreciable porque en relidad no suma considerablemente al costo total. En análisis de complejidad, a este exceso despreciable se le conoce como costo constante y no suele expresarse en la complejidad total del sistema, es por esto que hablando de complejidad, comunmente escucharás el término costo promedio.
+
+<div class="resumen">
+    <img src="imagenes/idea.png">
+    Las bases de datos explotan estos conceptos al máximo aumentando el grado del árbol para almacenar cientos de llaves en un nodo y, manteniendo la altura al mínimo con el fin de aumentar exponencialmente el número total de registros que pueden manejar, recuerda que como la complejidad para búscar una llave es logarítmica, aunque la cantidad de llaves en el árbol sean millones, la BD podrá encontrar una llave muy rápidamente.
+</div>
+
+<br/><br/><br/>
 
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
@@ -131,7 +138,7 @@ En matemáticas, el logaritmo base *b* de un número *N* equivale a pensar a que
     }
     .wrapper section{
         float:none !important;
-        width:90% !important;
+        width:80% !important;
         padding:0 0.5em !important;
         margin:0px auto;
         margin-top:80px;
@@ -142,6 +149,7 @@ En matemáticas, el logaritmo base *b* de un número *N* equivale a pensar a que
         .wrapper section{
             margin-top:120px !important;
             background-color:white;
+            width:90%;
         }
     }
     .encabezado{
