@@ -116,8 +116,15 @@ En matemáticas, el logaritmo base *b* de un número *N* equivale a pensar a que
     <img src="imagenes/idea.png">
     Las bases de datos explotan estos conceptos al máximo aumentando el grado del árbol para almacenar cientos de llaves en un nodo y, manteniendo la altura al mínimo con el fin de aumentar exponencialmente el número total de registros que pueden manejar, recuerda que como la complejidad para búscar una llave es logarítmica, aunque la cantidad de llaves en el árbol sean millones, la BD podrá encontrar una llave muy rápidamente.
 </div>
+<br/><br/>
 
-<br/><br/><br/>
+<div class="sugerencia">
+    <img src="imagenes/test.png">
+    <a href="">Experimenta con este simulador virtual de un BTree para comprender mejor el tema</a>
+    
+</div>
+
+<br/>
 
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
@@ -149,7 +156,7 @@ En matemáticas, el logaritmo base *b* de un número *N* equivale a pensar a que
         .wrapper section{
             margin-top:120px !important;
             background-color:white;
-            width:90%;
+            width:98%;
         }
     }
     .encabezado{
@@ -192,7 +199,26 @@ En matemáticas, el logaritmo base *b* de un número *N* equivale a pensar a que
         position:relative;
         padding-left:25px;
     }
-    .resumen img{
+    .sugerencia{
+        width:100%;
+        margin:0px auto;
+        /*background:#ebf3fc;*/
+        background:#000;
+        color:orange;
+        padding:1em;
+        border-radius:10px;
+        text-align:justify;
+        box-shadow:0px 0px 5px gray;
+        position:relative;
+        padding-left:25px;
+        text-align:center;
+    }
+    .sugerencia a:link,
+    .sugerencia a:visited
+    {
+        color:orange;
+    }
+    .resumen img, .sugerencia img{
         width:40px;
         position:absolute;
         left:-20px;
