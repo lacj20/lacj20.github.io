@@ -1,8 +1,8 @@
 <div class="encabezado">
-    <div class="col-md-8 col-sm-8 col-xs-12">
+    <div class="h-izq">
         <h1 class="titulo-h1">Auronix University | <em>Curso SQL</em></h1>
     </div>
-    <div class="col-md-4 col-sm-4 col-xs-12">
+    <div class="h-der">
         <img src="imagenes/previous.png"/>
         <img src="imagenes/home.png"/>
         <img src="imagenes/next.png"/>
@@ -117,17 +117,19 @@ El costo total de la consulta se obtiene sumando los costos de cada operación q
         z-index:100;
 
     }
-    .encabezado div: fist-child{
+    .h-izq{
         width:80%;
         float:left;
     }
-    .encabezado div: last-child{
+    .h-der{
         text-align:right;
         width:20%;
         float:right;
+        padding:10px 10px 0px 5px;
     }
     .encabezado div img{
         width:40px;
+        border:none;
     }
     .titulo-h1{
         color:white !important;
