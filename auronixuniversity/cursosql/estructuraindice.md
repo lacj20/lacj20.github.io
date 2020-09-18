@@ -120,7 +120,7 @@ En matemáticas, el logaritmo base *b* de un número *N* equivale a pensar a que
 
 <div class="sugerencia">
     <img src="imagenes/test.png">
-    <a href="https://www.cs.usfca.edu/~galles/visualization/BPlusTree.html">Experimenta con este simulador virtual de un BTree para comprender mejor el tema</a>
+    <a href="https://www.cs.usfca.edu/~galles/visualization/BPlusTree.html" target="_blank">Experimenta con este simulador virtual de un BTree para comprender mejor el tema</a>
     
 </div>
 
