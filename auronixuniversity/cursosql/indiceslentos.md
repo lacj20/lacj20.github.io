@@ -101,10 +101,7 @@ El costo total de la consulta se obtiene sumando los costos de cada operación q
     }
     @media print, screen and (max-width: 720px)
     {
-        .wrapper section{
-            margin-top:120px !important;
-             width:90%;
-        }
+        
     }
     .encabezado{
         background-color:black;
@@ -131,6 +128,10 @@ El costo total de la consulta se obtiene sumando los costos de cada operación q
     }
     @media print, screen and (max-width: 720px)
     {
+        .wrapper section{
+            margin-top:120px !important;
+             width:90%;
+        }
         .h-izq{
             width:60% !important;
             margin:0px;
@@ -140,10 +141,14 @@ El costo total de la consulta se obtiene sumando los costos de cada operación q
             width:40% !important;
             margin:0px;
         }
+        titulo-h1{
+            font-size:20px;
+        }
     }
     .encabezado div img{
         width:40px;
         border:none;
+        margin:0px;
     }
     .titulo-h1{
         color:white !important;
