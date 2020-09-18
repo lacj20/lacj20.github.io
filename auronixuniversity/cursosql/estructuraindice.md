@@ -136,3 +136,8 @@ En matemáticas, el logaritmo base *b* de un número *N* equivale a pensar a que
 <br/>
 
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<style>
+    *{
+        box-sizing:border-box !important;
+    }
+</style>
