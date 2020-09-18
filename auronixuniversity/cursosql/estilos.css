@@ -1,6 +1,6 @@
 <style>
     *{
-        box-sizing:border-box;    
+        box-sizing:border-box !important;    
     }
     body{
         padding:0px !important;
