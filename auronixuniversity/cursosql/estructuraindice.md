@@ -1,7 +1,8 @@
 <div class="encabezado">
     <h1 class="titulo-h1">Auronix University | <em>Curso SQL</em></h1>
 </div>
-# Estructura de los índices
+
+# Estructura de los índices #
 
 {:.justificado}
 La función principal de un índice en una base de datos relacional es acelerar la ejecución de las sentencias SQL, el objetivo del presente material no es tener la conceptualización superflua de cómo trabaja un índice, en realidad, lo que se quiere es profundizar hasta donde sea necesario para lograr entender los aspectos a tomar en consideración cuando se trata de optimizar las consultas SQL.
@@ -68,7 +69,7 @@ La *figura 1.2* muestra la estructura de índices creada con un BTree, la lista 
 
 <div class="resumen">
     <img src="imagenes/idea.png">
-    En resumen un BTree es una estructura de <em>árbol de búsqueda equilibrado</em> que mantiene su profundidad al mínimo posible, esta propiedad permite que todas las operaciones sean logarítmicas, esto quiere decir que son aceptablemente rápidas. Los manejadores de bases de datos que utilizan BTree para el ínidice, mantienen automáticamente la estructura cuando se aplican operaciones de <strong><em>insert</em></strong>, <strong><em>delete</em></strong> y <strong><em>update</em></strong>.
+    En resumen un BTree es una estructura de <em>árbol de búsqueda equilibrado</em> que mantiene su profundidad al mínimo posible permitiendo que todas las operaciones sean logarítmicas, esto quiere decir que son aceptablemente rápidas. Los manejadores de bases de datos que utilizan BTree para el ínidice, mantienen automáticamente la estructura cuando se aplican operaciones de <strong><em>insert</em></strong>, <strong><em>delete</em></strong> y <strong><em>update</em></strong>.
 </div>
 
 ## Recorrido del índice BTree ##
@@ -108,7 +109,7 @@ En matemáticas, el logaritmo base *b* de un número *N* equivale a pensar a que
 {:.justificado}
 1. Sea $$b$$ el grado del árbol ($$b=4$$) y $$x$$ su profundidad o altura ($$x=3$$), entonces $$4^3=64$$, este resultado representa el ***número máximo de llaves que el árbol puede representar***, en nueestro ejemplo, el BTree podrá representar hasta *64* registros.
 
-2. Si se aumentara la profundidad del árbol en $$1$$ entonces, $$b=4$$ y $$x=4$$, por lo tanto, $$4^4=256$$, la cantidad de registros que el árbol puede representar incrementa considerablemente, si seguimos este ejercicio hasta llegar a una profundidad de $$10$$ el número máximo de registros representados en el árbol es $$4^{10}=1,048,576$$ llaves de registros.
+2. Si se aumentara la profundidad del árbol en $$1$$ entonces, $$b=4$$ y $$x=4$$, por lo tanto, $$4^4=256$$, la cantidad de registros que el árbol puede representar incrementa considerablemente, si seguimos este ejercicio hasta llegar a una profundidad de $$10$$, el número máximo de registros representados en el árbol es $$4^{10}=1,048,576$$ llaves de registros.
 
 3. Otro cálculo pertinente es el costo de encontrar una llave en el árbol y está dado por $$costo=log_b(N)$$, donde $$b$$ representa el grado del árbol y $$N$$ el total de llaves en el árbol. Para nuestro caso ejemplo, el costo promedio de encontrar una llave es $$log_4(64)=3$$, lo que significa que solo tendremos que visitar en promedio $$3$$ nodos para encontrar un dato. El número total de comparaciones que se hacen no es exactamente $$3$$, para ser exactos, es al menos $$3$$, recuerda que dentro de un nodo, hay varias llaves ordenadas de menor a mayor, y se tienen que hacer comparaciones dento del nodo para elegir la llave correcta, sin embargo, conforme crece el volumen de datos y se minimiza el grado del árbol, este dato es despreciable porque en relidad no suma considerablemente al costo total. En análisis de complejidad, a este exceso despreciable se le conoce como costo constante y no suele expresarse en la complejidad total del sistema, es por esto que hablando de complejidad, comunmente escucharás el término costo promedio.
 
