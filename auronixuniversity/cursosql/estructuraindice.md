@@ -1,5 +1,13 @@
+<link rel="stylesheet" type="text/css" href="estilos.css">
 <div class="encabezado">
-    <h1 class="titulo-h1">Auronix University | <em>Curso SQL</em></h1>
+    <div class="h-izq">
+        <h1 class="titulo-h1">Auronix University | <em>Curso SQL</em></h1>
+    </div>
+    <div class="h-der">
+        <a href="estructuraindice.md"><img src="imagenes/previous.png"/></a>
+        <a href="/"><img src="imagenes/home.png"/></a>
+        <a href="clausulawhere.md"><img src="imagenes/next.png"/></a>
+    </div>   
 </div>
 
 # Estructura de los índices #
@@ -128,105 +136,3 @@ En matemáticas, el logaritmo base *b* de un número *N* equivale a pensar a que
 <br/>
 
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-
-<style>
-    *{
-        box-sizing:border-box;    
-    }
-    body{
-        padding:0px !important;
-    }
-    .wrapper{
-        width:100% !important;
-
-    }
-    .wrapper header, .wrapper footer
-    {
-        display:none !important;
-    }
-    .wrapper section{
-        float:none !important;
-        width:80%;
-        padding:0 0.5em !important;
-        margin:0px auto;
-        margin-top:80px;
-
-    }
-    @media print, screen and (max-width: 720px)
-    {
-        .wrapper section{
-            margin-top:120px !important;
-             width:90%;
-        }
-    }
-    .encabezado{
-        background-color:black;
-        color:white;
-        position:fixed;
-        width:100%;
-        margin:0 0;
-        left:0px;
-        top:0px;
-        z-index:100;
-
-    }
-    .titulo-h1{
-        color:white !important;
-        border:none !important;
-        margin:0 !important;
-        padding:15px !important;
-    }
-    .justificado{
-        text-align:justify;
-    }
-    .img-centrada{
-        text-align:center;
-        margin:2em 1em;
-    }
-    .img-centrada img{
-        width:100%;
-    }
-    .resumen{
-        width:100%;
-        margin:0px auto;
-        /*background:#ebf3fc;*/
-        background:#000;
-        color:white;
-        padding:1em;
-        border-radius:10px;
-        text-align:justify;
-        box-shadow:0px 0px 5px gray;
-        position:relative;
-        padding-left:25px;
-    }
-    .sugerencia{
-        width:100%;
-        margin:0px auto;
-        /*background:#ebf3fc;*/
-        background:#000;
-        color:orange;
-        padding:1em;
-        border-radius:10px;
-        text-align:justify;
-        box-shadow:0px 0px 5px gray;
-        position:relative;
-        padding-left:25px;
-        text-align:center;
-    }
-    .sugerencia a:link,
-    .sugerencia a:visited
-    {
-        color:orange;
-    }
-    .resumen img, .sugerencia img{
-        width:40px;
-        position:absolute;
-        left:-20px;
-        top:15px;
-        border:none !important;
-        box-shadow:none !important;
-        margin:0px !important;  
-        padding:2px;  
-    }
-    
-</style>
