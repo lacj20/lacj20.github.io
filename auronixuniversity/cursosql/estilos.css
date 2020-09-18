@@ -58,6 +58,11 @@
     code{
         background-color: white;
         border-radius:3px;
+        padding:3px;
+        box-shadow: 0px 0px 2px black;
+    }
+    pre code{
+        box-shadow: 0px 0px 0px black !important;
     }
     .justificado{
         text-align:justify;
