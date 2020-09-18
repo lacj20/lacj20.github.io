@@ -10,6 +10,8 @@ A pesar de la eficiencia del recorrido del árbol, existen casos en los que el �
 {:.justificado}
 La segunda causa de búsquedas lentas aun usando un índice es tener que ir a la tabla. Hasta un nodo hoja simple podría contener varias veces el valor buscado. Los datos correspondientes de la tabla suelen estar diseminados entre varios bloques, esto significa que existe un acceso adicional a la tabla por cada valor encontrado dentro del índice.
 
+ ## Operaciones ##
+
 {:.justificado}
 Una búsqueda por índice requiere tres etapas:
 
@@ -18,11 +20,13 @@ Una búsqueda por índice requiere tres etapas:
 2. El recorrido sobre los nodos hoja.
 
 3. El acceso a la tabla para devolver los datos del registro.
+ 
+ ## Operaciones ##
 
 {:.justificado}
  El recorrido del árbol es la única etapa que tiene acceso a un número limitado de bloques, corresponde a la profundidad del árbol. Las otras dos etapas deberían tener acceso a muchos bloques que pueden ser la causa de la lentitud durante una búsqueda a través de un índice.
-
- # Operaciones #
+ 
+  # Operaciones #
 
 Cuando la BD recibe una sentencia SQL, construye un plan de ejecución para poder resolver todos los elementos de la consulta, este plan ejecuta las operaciones necesarias para generar una respuesta en el menor tiempo posible. Existen tres operaciones que es necesario conocer para poder analizar la eficiencia de una consulta:
 
