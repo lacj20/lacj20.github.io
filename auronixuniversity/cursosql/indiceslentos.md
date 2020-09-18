@@ -2,8 +2,8 @@
     <h1 class="titulo-h1">Auronix University | <em>Curso SQL</em></h1>
 </div>
 
- ## Operaciones ##
- 
+ # Operacioness #
+
 # ¿Por qué los índices pueden ser lentos? #
 
  ## Operaciones ##
