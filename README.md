@@ -10,7 +10,7 @@ Hola, bienvenido a **Auronix University**, un espacio donde encontrarás una bas
 
 * Curso SQL
   * [Arquitectura de los índices](auronixuniversity/cursosql/estructuraindice.md)
-  * [Índices lentos]()
+  * [Índices lentos](auronixuniversity/cursosql/indiceslentos.md)
   * [La cláusula where]()
 * El ambiente de desarrollo Nova
   * [Primeros pasos]()
