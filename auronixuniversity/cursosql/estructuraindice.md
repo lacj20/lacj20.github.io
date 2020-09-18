@@ -139,13 +139,13 @@ En matemáticas, el logaritmo base *b* de un número *N* equivale a pensar a que
         width:100% !important;
 
     }
-        .wrapper header, .wrapper footer
+    .wrapper header, .wrapper footer
     {
         display:none !important;
     }
     .wrapper section{
         float:none !important;
-        width:80% !important;
+        width:80%;
         padding:0 0.5em !important;
         margin:0px auto;
         margin-top:80px;
@@ -155,7 +155,7 @@ En matemáticas, el logaritmo base *b* de un número *N* equivale a pensar a que
     {
         .wrapper section{
             margin-top:120px !important;
-            background-color:white;
+            //background-color:white;
             width:98%;
         }
     }
