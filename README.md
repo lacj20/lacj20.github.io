@@ -8,7 +8,7 @@ Hola, sientete bienvenido a **Auronix University**, un espacio donde encontrará
 >A título personal, estoy a tus órdenes para aclarar cualquier duda que surja respecto al material de aprendizaje. Si sientes que no entiendes algo, no dudes en contactar a la oficina de ***Tech Training*** 
 
 * Curso SQL
-  * [Arquitectura de los índices](auronixuniversity/estructuraindice.md)
+  * [Arquitectura de los índices](auronixuniversity/cursosql/estructuraindice.md)
   * [Buenas prácticas para evitar índices lentos]()
   * [La cláusula where y los índices]()
 * El ambiente de desarrollo Nova
