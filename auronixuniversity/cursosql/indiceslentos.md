@@ -2,11 +2,12 @@
     <h1 class="titulo-h1">Auronix University | <em>Curso SQL</em></h1>
 </div>
 
-# ¿Por qué los índices pueden ser lentos? #
-
-
  ## Operaciones ##
  
+# ¿Por qué los índices pueden ser lentos? #
+
+ ## Operaciones ##
+
 {:.justificado}
 A pesar de la eficiencia del recorrido del árbol, existen casos en los que el índice no trabaja tan rápidamente como esperamos. El primer elemento de un índice lento es el encadenamiento de los nodos hoja. Tomando el ejemplo de la búsqueda del valor `57`, existen dos entradas que cumplen el filtro en la búsqueda. Al menos dos entradas son idénticas, sin embargo, el próximo nodo hoja podría contener nuevas entradas con el valor 57. La base de datos debe leer el próximo nodo hoja para validar si no existen más valores que cumplan los requisitos demandados. Esto significa que la búsqueda por el índice no solo necesita hacer el recorrido sobre el árbol, también debe hacer una búsqueda secuencial sobre los nodos hoja.
 
