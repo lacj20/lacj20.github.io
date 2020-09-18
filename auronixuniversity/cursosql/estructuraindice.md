@@ -156,8 +156,6 @@ En matemáticas, el logaritmo base *b* de un número *N* equivale a pensar a que
         .wrapper section{
             margin-top:120px !important;
              width:90%;
-            //background-color:white;
-           
         }
     }
     .encabezado{
