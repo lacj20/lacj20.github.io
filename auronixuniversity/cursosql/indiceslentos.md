@@ -120,21 +120,25 @@ El costo total de la consulta se obtiene sumando los costos de cada operación q
     .h-izq{
         width:80%;
         float:left;
+        margin:0px;
     }
     .h-der{
         text-align:right;
         width:20%;
         float:right;
         padding:5px;
+        margin:0px;
     }
     @media print, screen and (max-width: 720px)
     {
         .h-izq{
             width:60% !important;
+            margin:0px;
         }
         .h-der
         {
             width:40% !important;
+            margin:0px;
         }
     }
     .encabezado div img{
