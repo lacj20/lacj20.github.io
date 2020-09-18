@@ -1,5 +1,12 @@
 <div class="encabezado">
-    <h1 class="titulo-h1">Auronix University | <em>Curso SQL</em></h1>
+    <div class="col-md-8 col-sm-8 col-xs-12">
+        <h1 class="titulo-h1">Auronix University | <em>Curso SQL</em></h1>
+    </div>
+    <div class="col-md-4 col-sm-4 col-xs-12">
+        <img scr="imagenes/previous.png"/>
+        <img scr="imagenes/home.png"/>
+        <img scr="imagenes/next.png"/>
+    </div>   
 </div>
  
 
@@ -63,11 +70,9 @@ El costo total de la consulta se obtiene sumando los costos de cada operación q
 
 <div class="resumen">
     <img src="imagenes/idea.png">
-    La rapidez con la que se ejecuta una consulta depende completamente de la correcta indexación en la BD y la construcción consciente de el enunciado **SQL**.
+    La rapidez con la que se ejecuta una consulta depende completamente de la correcta indexación en la BD y la construcción consciente de el enunciado <em>SQL</em>.
 </div>
 <br/><br/>
-
-
 
 
 
@@ -111,6 +116,12 @@ El costo total de la consulta se obtiene sumando los costos de cada operación q
         top:0px;
         z-index:100;
 
+    }
+    .encabezado div:fist-child{
+        text-align:right;
+    }
+    .encabezado div img{
+        width:40px;
     }
     .titulo-h1{
         color:white !important;
