@@ -22,7 +22,7 @@ Una búsqueda por índice requiere tres etapas:
 {:.justificado}
  El recorrido del árbol es la única etapa que tiene acceso a un número limitado de bloques, corresponde a la profundidad del árbol. Las otras dos etapas deberían tener acceso a muchos bloques que pueden ser la causa de la lentitud durante una búsqueda a través de un índice.
 
- # Operaciones de búsqueda sobre índices #
+ # Operaciones #
 
 Cuando la BD recibe una sentencia SQL, construye un plan de ejecución para poder resolver todos los elementos de la consulta, este plan ejecuta las operaciones necesarias para generar una respuesta en el menor tiempo posible. Existen tres operaciones que es necesario conocer para poder analizar la eficiencia de una consulta:
 
