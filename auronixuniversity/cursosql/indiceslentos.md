@@ -1,8 +1,8 @@
+# hola #
 <div class="encabezado">
     <h1 class="titulo-h1">Auronix University | <em>Curso SQL</em></h1>
 </div>
-
- # Operacioness 
+ 
 
 ¿Por qué los índices pueden ser lentos? 
 
