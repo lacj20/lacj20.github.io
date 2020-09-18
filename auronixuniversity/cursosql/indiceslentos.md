@@ -3,9 +3,9 @@
         <h1 class="titulo-h1">Auronix University | <em>Curso SQL</em></h1>
     </div>
     <div class="col-md-4 col-sm-4 col-xs-12">
-        <img scr="imagenes/previous.png"/>
-        <img scr="imagenes/home.png"/>
-        <img scr="imagenes/next.png"/>
+        <img src="imagenes/previous.png"/>
+        <img src="imagenes/home.png"/>
+        <img src="imagenes/next.png"/>
     </div>   
 </div>
  
@@ -117,8 +117,14 @@ El costo total de la consulta se obtiene sumando los costos de cada operación q
         z-index:100;
 
     }
-    .encabezado div:fist-child{
+    .encabezado div: fist-child{
+        width:80%;
+        float:left;
+    }
+    .encabezado div: last-child{
         text-align:right;
+        width:20%;
+        float:right;
     }
     .encabezado div img{
         width:40px;
