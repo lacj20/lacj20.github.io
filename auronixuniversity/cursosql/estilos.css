@@ -55,6 +55,10 @@
         margin:0 !important;
         padding:15px !important;
     }
+    code{
+        background-color: white;
+        border-radius:3px;
+    }
     .justificado{
         text-align:justify;
     }
