@@ -11,7 +11,7 @@
      @font-face 
    {
       font-family: 'Montserrat SemiBold', 'Monserrat-SemiBold';
-      src: url(svg/Monserrat-SemiBold.ttf)
+      src: url(svg/Montserrat-SemiBold.ttf)
     }  
 </style>
 </svg>
