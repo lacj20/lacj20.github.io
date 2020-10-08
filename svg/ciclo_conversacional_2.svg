@@ -9,7 +9,7 @@
 </g>
 <defs>
     style{
-         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
     }
 </defs>
 </svg>
