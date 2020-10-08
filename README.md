@@ -12,7 +12,7 @@ Hola, bienvenido a **Auronix University**, un espacio donde encontrarás una bas
 <style>
    @font-face 
    {
-      font-family: 'Montserrat SemiBold','Montserrat SemiBold';
+      font-family: 'Montserrat SemiBold','Montserrat-SemiBold';
       src: url(svg/Montserrat-SemiBold.ttf)
     }  
       
