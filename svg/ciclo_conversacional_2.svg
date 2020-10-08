@@ -7,9 +7,4 @@
         <circle class="cls-70" cx="1310.98" cy="384" r="31.98" transform="translate(112.45 1039.47) rotate(-45)"/>
     </a>    
 </g>
-<defs>
-    style{
-            @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
-    }
-</defs>
 </svg>
