@@ -6,4 +6,12 @@
     <a href="ciclo_conversacional_2.svg">
         <circle class="cls-56" cx="1310.98" cy="384" r="31.98" transform="translate(112.45 1039.47) rotate(-45)"/>
     </a>
-</g></svg>
+</g>
+<style>
+     @font-face 
+   {
+      font-family: 'Montserrat SemiBold', 'Monserrat-SemiBold';
+      src: url(svg/Monserrat-SemiBold.ttf)
+    }  
+</style>
+</svg>
