@@ -10,10 +10,11 @@ Hola, bienvenido a **Auronix University**, un espacio donde encontrarás una bas
 
 
 <style>
-  .wrapper{
-    margin:0 auto;
-  }
-  .justificado{
-     text-align:justify;
-    }
+   @font-face 
+   {
+      font-family: 'Montserrat SemiBold';
+      src: url(svg/Monserrat-SemiBold.ttf)
+    }  
+      
+  
 </style>
