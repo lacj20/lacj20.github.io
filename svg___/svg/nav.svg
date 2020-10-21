@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 133 63.96">
+    <defs>
+        <style>.cls-1{fill:#fff;}</style>
+    </defs><title>Recurso 15</title>
+    <g id="buttons" data-name="buttons">
+    <g id="navegacion">
+        <a href="#" target="container-svg">
+            <circle cx="31.98" cy="31.98" r="31.98" transform="translate(-13.25 31.98) rotate(-45)"/>
+            <path class="cls-1" d="M16.86,30.92,30.63,17.16a1.48,1.48,0,0,1,2.1,2.1L21.49,30.49H51.32a1.49,1.49,0,1,1,0,3H21.49L32.72,44.7a1.48,1.48,0,0,1,0,2.1,1.52,1.52,0,0,1-1.06.43,1.46,1.46,0,0,1-1.06-.43L16.85,33A1.53,1.53,0,0,1,16.86,30.92Z"/>
+        </a>
+        <a href="#" target="container-svg">        
+            <circle cx="101.02" cy="31.98" r="31.98" transform="translate(6.97 80.8) rotate(-45)"/>
+            <path class="cls-1" d="M116.15,33,102.39,46.8a1.46,1.46,0,0,1-1.06.43,1.52,1.52,0,0,1-1.06-.43,1.48,1.48,0,0,1,0-2.1l11.23-11.23H81.68a1.49,1.49,0,1,1,0-3h29.83L100.28,19.26a1.48,1.48,0,0,1,2.1-2.1l13.76,13.76A1.53,1.53,0,0,1,116.15,33Z"/>
+        </a>    
+    </g>
+    </g>
+</svg>

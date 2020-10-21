@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../estiloif.css"/>
+        <meta charset="utf-8"/>
+    </head>
+    <body class="explaning">
+        <br/><br/>
+        <h2>Endpoint</h2>
+        <p>
+            Los endpoints son entidades que viven en la arquitectura de yggs, son los componentes que permiten la comunicación con el exterior, y se encargan principalmente de hacer las traducciones entre el "idioma" de cualquier canal/plataforma al "idioma" de la arquitectura interna (dentro de yggs se habla el idioma AI). <br/><strong><em>Pensemos en los endpoints como traductores del "idioma" de un canal específico a lenguaje yggs</em></strong>.
+        </p>
+        <p>
+            Las funciones primarias de un endpoint son:
+            <ul>
+                <li>Comunicarse con un y solo un tipo de canal, al canal con el que se comunique se le denomina <em>protocolo</em>.</li>
+                <li>Sabe realizar una traducción entre cualquier tipo de mensaje del canal hacia un mensaje AI y de forma inversa sabe traducir cualquier mensaje AI hacia su mejor representación dentro del canal.</li>
+                <li>La traducción de mensajes no necesariamente es uno a uno, los endpoints tienen la libertad, si es la mejor opción para un canal, de traducir un mensaje AI a muchos mensajes del canal o viceversa.</li>
+            </ul>
+        </p>
+    </body>
+</html>

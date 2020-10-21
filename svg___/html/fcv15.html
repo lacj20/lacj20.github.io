@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../estiloif.css"/>
+        <meta charset="utf-8"/>
+        <style>
+           td:first-child{
+                text-align: center;
+                font-weight: bold;
+           }
+        </style>
+    </head>
+    <body class="explaning">
+        <br/><br/>
+        <h2>Verificando respuestas de remotos</h2>
+        
+        
+        <p>    
+            La respuesta a un mensaje invite contiene entre otros campos, el código de estatus según el estándar HTTP. Los códigos de respuesta soportados para un mensaje invite son:
+        </p>    
+        <table>
+                <tr>
+                    <th>Código</th>
+                    <th>Descripción</th>
+                </tr>
+                <tr>
+                    <td>200,201</td>
+                    <td>CREATED, OK: Indica que el endpoint puede contactar al remoto, que determinó una ruta de salida adecuada y que se creó satisfactoriamente la relación para enrutar los mensajes recibidos.</td>
+                </tr>
+                <tr>
+                    <td>202</td>
+                    <td>ACCEPTED: Indica que se podrán enviar mensajes hacia el remoto, pero no se podrán recibir, es decir, solo salida.</td>
+                </tr>
+                <tr>
+                    <td>302</td>
+                    <td>TEMPORARY REDIRECT: El remoto no pudo ser contactado por el endpoint, ofrece enrutamiento donde quizá se pueda contactar.</td>
+                </tr>
+                <tr>
+                    <td>303</td>
+                    <td>SEE OTHER: El remoto no puede ser contactado por el endpoint, se ofrece una nueva forma para contactarlo.</td>
+                </tr>
+                <tr>
+                    <td>400</td>
+                    <td>BAD REQUEST: La petición contiene un JSON mal formado o con parámetros insuficientes.</td>
+                </tr>
+                <tr>
+                    <td>404</td>
+                    <td>NOT FOUND: El endpoint no puede contactar al remoto y no conoce una forma de hacerlo.</td>
+                </tr>
+                <tr>
+                    <td>500</td>
+                    <td>INTERNAL ERROR: El endpoint presentó un error al tratar de seguir el flujo para dar una respuesta al invite, el switch puede decidir reintentar.</td>
+                </tr>
+        </table>
+        <br/>        
+    </body>
+</html>

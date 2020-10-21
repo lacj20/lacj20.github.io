@@ -1,0 +1,48 @@
+@font-face{
+    font-family: montserrat;
+    src:url('fonts/Montserrat-Regular.ttf');
+}
+@font-face{
+    font-family: montserrat-sb;
+    src:url('fonts/Montserrat-SemiBold.ttf');
+}
+*{
+    font-family: montserrat;
+    
+}
+h1{
+    font-family: montserrat-sb;
+    font-size: 2em;
+    font-family: montserrat;
+}
+p{
+    font-family: montserrat;
+    text-align: justify;
+}
+li{
+    padding: 10px;
+}
+.explaning{
+    padding-right: 20px;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+th,td{
+    font-size: 0.85em;
+    text-align: justify;
+    padding:5px 3px;
+}
+tr:nth-child(odd)
+{
+    background-color: aliceblue;
+}
+tr:first-child{
+    background-color:midnightblue;
+    color:white;
+}
+tr:last-child{
+    border-bottom: solid midnightblue 2px;   
+}
