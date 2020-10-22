@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../estiloif.css"/>
+        <meta charset="utf-8"/>
+    </head>
+    <body class="explaning">
+        <h2>Procesando mensaje ENDPOINTBYE</h2>
+        <p>    
+            Cuando el switch recibe un mensaje <b><em>ENDPOINTBYE</em></b>, evalúa a través de la inbound rule, si el remoto remitente puede salir de la conversación, en caso de que la configuración en la IR diga que no puede salir, la conversación termina. Este proceso se repite para cada mensaje ENDPOINTBYE recibido durante el flujo de la conversación. Si el remoto que envió el mensaje está configurado con permiso para salir de la conversación, solo se retira y el flujo de la conversación continúa entre el resto de participantes. 
+        </p>    
+        <p>
+            <b><em>Recuerda que cuando configuras con false la bandera "puede salir de la conversación" para un remoto en el CCP de una inbound rule, la conversación terminará cuando ese remoto se retire.</em></b>
+        </p>
+               
+        <br/>        
+    </body>
+</html>

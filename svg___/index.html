@@ -17,26 +17,33 @@
                 border:none;
                 width:100%;
                 height: 100%;
-               
             }
             #container-svg{
                 padding: 10px;
             }
+            #info{
+                height: 80%;
+                position: relative;
+                z-index: 1;;
+            }
             #svg{
                 width: 70%;
-                height: 85%;
+                height: 100%;
                 float:left;
                 text-align: center;
                 position: relative;
+                padding-top: 10px;;
             }
             #explain{
                 width: 30%;
-                height: 85%;
+                height: 100%;
                 float:right;
                 position: relative;
             }
             header{
-                height:80px !important;
+                height:90px !important;
+                background-color:#242f62;
+                color:white;
             }
             header hr{
                 clear:both;
@@ -47,11 +54,12 @@
                 text-align: right;
                 padding: 10px;
                 height: 100%;
-                line-height: 50px;
+                
             }
             header h1:first-child{
                 width:15%;
                 float:left;
+                line-height: 90px;
             }
             header h1:first-child img{
                 height: 60px;
@@ -59,91 +67,172 @@
             header h1:last-child{
                 width:85%;
                 float:right;
+                position: relative;
             }
+            .main-header{
+                display: block;
+                margin:0px;
+                padding:0px;
+                
+            }
+            .main-header:last-child{
+                font-size: 0.6em !important;
+            }
+            
             nav{
-                position:absolute;
-                width: 100px;
-                right:20px;
-                top:10px;
+                width: 100%;
+                height:60px;
+                text-align: right;
+                padding-top: 5px;
+                padding-right: 5px;
+                padding-bottom: 5px;
+                position: relative;
+                z-index: 3;
+                overflow: hidden;
+                line-height: 50px;
             }
-            nav a{
+            nav div{
+                float:right;
+                height: 50px;
+            }
+            nav div:first-child, nav div:last-child{
+               width: 50px;
+            }
+            nav div a{
                 cursor: pointer;
             }
             .awhite{
                 fill:white;
             }
-            
+            .pagePointer{
+                width:40px;
+                height:40px;
+                border-radius: 20px;
+                background-color: black;
+                margin:5px 1px 5px 1px;
+                color:white;
+                text-align: center;
+                line-height: 40px;
+                cursor: pointer;
+                display: inline-block;
+                text-align: center;
+            }
+            .currentPage{
+                background-color:#242f62;
+            }
+            #pages{
+                max-width: 210px;
+            }
+            #pages p:hover{
+                background-color:#709DCD;;
+            }
         </style>
     </head>
-    <body>
+    <body onload="pagination();">
         <header>
             <h1>
                 <img src="svg/logo.svg"/>
             </h1>
             <h1>
-                ARQUITECTURA YGGDRASIL
+                <span class="main-header">ARQUITECTURA YGGDRASIL</span>
+                <span class="main-header"> &lt;Ciclo de vida conversacional&gt;</span>
             </h1>
+            
             <hr/>
         </header>
-        
-        <section id="svg">
-           
-            <object type="image/svg+xml" data="svg/fcv1.svg" id="container-svg" name="container-svg"  onload="carga()"></object>
-           
-        </section>
-        <article id="explain">
-            <nav>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 133 63.96">
-                    <defs>
-                        <style>
-                            a:hover{
-                                fill:blue;
-                            }
-                        </style>
-                    </defs>
-                    <g id="buttons" data-name="buttons">
-                        <g id="navegacion">
-                            <a onclick="prev()" id="prev">
-                                <circle cx="31.98" cy="31.98" r="31.98" transform="translate(-13.25 31.98) rotate(-45)"/>
-                                <path class="awhite" d="M16.86,30.92,30.63,17.16a1.48,1.48,0,0,1,2.1,2.1L21.49,30.49H51.32a1.49,1.49,0,1,1,0,3H21.49L32.72,44.7a1.48,1.48,0,0,1,0,2.1,1.52,1.52,0,0,1-1.06.43,1.46,1.46,0,0,1-1.06-.43L16.85,33A1.53,1.53,0,0,1,16.86,30.92Z"/>
-                                <!--path id="prev" d="M9.37,54.59a32,32,0,1,0,0-45.23A32,32,0,0,0,9.37,54.59Zm7.5-23.67L30.63,17.16a1.48,1.48,0,0,1,2.1,2.1L21.49,30.49H51.32a1.49,1.49,0,1,1,0,3H21.49L32.72,44.7a1.48,1.48,0,0,1,0,2.1,1.52,1.52,0,0,1-1.06.43,1.46,1.46,0,0,1-1.06-.43L16.85,33A1.53,1.53,0,0,1,16.86,30.92Z"/-->
-                            </a>
-                            <a onclick="next()" id="next">
-                                <!--path id="next" d="M123.63,9.37a32,32,0,1,0,0,45.23A32,32,0,0,0,123.63,9.37ZM116.15,33,102.39,46.8a1.46,1.46,0,0,1-1.06.43,1.52,1.52,0,0,1-1.06-.43,1.48,1.48,0,0,1,0-2.1l11.23-11.23H81.68a1.49,1.49,0,1,1,0-3h29.83L100.28,19.26a1.48,1.48,0,0,1,2.1-2.1l13.76,13.76A1.53,1.53,0,0,1,116.15,33Z"/-->
-                                <circle cx="101.02" cy="31.98" r="31.98" transform="translate(6.97 80.8) rotate(-45)"/>
-                                <path class="awhite" d="M116.15,33,102.39,46.8a1.46,1.46,0,0,1-1.06.43,1.52,1.52,0,0,1-1.06-.43,1.48,1.48,0,0,1,0-2.1l11.23-11.23H81.68a1.49,1.49,0,1,1,0-3h29.83L100.28,19.26a1.48,1.48,0,0,1,2.1-2.1l13.76,13.76A1.53,1.53,0,0,1,116.15,33Z"/>
-                            </a>
-                        </g>
+        <nav>   
+            <div>
+                <svg viewBox="0 0 63.9 63.96">
+                    <defs><style>a:hover{fill:#709DCD;}</style></defs>
+                    <g id="svgnexts">
+                        <a onclick="next()" id="next">
+                            <circle cx="31.98" cy="31.98" r="31.98"/>
+                            <path class="awhite" d="M21.81,15.66l21,13.91a2,2,0,0,1,.9,1.67v.86a2,2,0,0,1-.86,1.65l-21,14.49a1,1,0,0,1-1.57-.82v-3.3a1,1,0,0,1,.44-.83l16.2-10.85a1,1,0,0,0,0-1.68L20.73,20.67a1,1,0,0,1-.47-.85V16.5A1,1,0,0,1,21.81,15.66Z"/>
+                        </a>
                     </g>
-                    </svg>
-            </nav>
-            <object id="explainHtml"  name="articulo">
+                </svg>
+            </div>
+            <div id="pages">
+            </div>
+            <div>
+                <svg viewBox="0 0 63.9 63.96">
+                    <defs><style>a:hover{fill:#709DCD;}</style></defs>
+                    <g id="svgprevs">
+                        <a onclick="prev()" id="prev">
+                            <circle cx="31.98" cy="31.98" r="31.98"/>
+                            <path class="awhite" d="M43.7,16.5v3.33a1,1,0,0,1-.47.85L27.08,30.75a1,1,0,0,0,0,1.68l16.2,10.85a1,1,0,0,1,.44.83v3.3a1,1,0,0,1-1.57.82l-21-14.49a2,2,0,0,1-.86-1.65v-.86a2,2,0,0,1,.9-1.67l21-13.91A1,1,0,0,1,43.7,16.5Z"/>        
+                        </a>
+                    </g>
+                </svg>        
+            </div>
+                
+        </nav>
+        <div id="info">
+            <section id="svg">
+                <object type="image/svg+xml" data="svg/fcv1.svg" id="container-svg" name="container-svg"  onload="carga()"></object>
+            </section>
+            <article id="explain">
+                <object id="explainHtml"  name="articulo">
 
-            </object>
-        </article>
-        
+                </object>
+            </article>
+            <div style="clear:both;"></div>
+        </div>
     </body>
     
 </html>
  <script type="text/javascript">
-   var maxPages=18;
+   var maxPages=25;
    var curPage=0;
+   var oldPage=1;
+   var leftPage=1;
+   var widthView=5;
+   var rightPage=widthView;
    var prevPage=0;
+   var prefix="fcv";
+   
    function carga()
    {
        setTimeout(() => {
             curPage=localStorage.getItem('curPage')*1;
-            console.log(curPage);
+            document.getElementById("page"+oldPage).classList.remove("currentPage");
+            oldPage=curPage;
+            document.getElementById("page"+curPage).classList.add("currentPage");
+            if(curPage<leftPage || curPage>rightPage)
+            {
+                if(curPage>rightPage)
+                {
+                    leftPage=curPage;
+                    rightPage=curPage+widthView-1;
+                    if(rightPage>maxPages)
+                        {rightPage=maxPages;leftPage=maxPages-widthView+1;}
+                }   
+                else
+                {
+                    rightPage=curPage;
+                    leftPage=curPage-widthView+1;
+                    if(leftPage<1)
+                        {leftPage=1;rightPage=widthView;}
+                }     
+                for(p=1;p<=maxPages;p++)
+                {
+                    if(p>=leftPage && p<=rightPage)
+                        document.getElementById("page"+p).style.display="inline-block";
+                    else
+                    document.getElementById("page"+p).style.display="none";
+                }
+            }
+            
             wdth=localStorage.getItem('wdth')*1;
             
-            document.getElementById("explainHtml").data="html/fcv"+curPage+".html"; 
+            document.getElementById("explainHtml").data="html/"+prefix+curPage+".html"; 
             document.getElementById("svg").style.width=wdth+"%";
             document.getElementById("explain").style.width=(100-wdth)+"%";
-            if(curPage==1)
+            if(curPage<=1)
             {
                 document.getElementById("prev").style.display="none";
             }
-            else if(curPage==maxPages)
+            else if(curPage>=maxPages)
             {
                 document.getElementById("next").style.display="none";
             }
@@ -161,11 +250,32 @@
        
    }
    function next(){
-       prevPage="svg/fcv"+(curPage+1)+".svg";
-       document.getElementById("container-svg").data="svg/fcv"+(curPage+1)+".svg";
+       document.getElementById("container-svg").data="svg/"+prefix+(curPage+1)+".svg";
    }
    function prev(){
-       document.getElementById("container-svg").data="svg/fcv"+(curPage-1)+".svg";
+       document.getElementById("container-svg").data="svg/"+prefix+(curPage-1)+".svg";
    }
-  
+   function goPage(e)
+   {
+     p=e.getAttribute("data-id");
+     document.getElementById("container-svg").data="svg/"+prefix+p+".svg";
+   }
+   function pagination()
+   {
+       contPages=document.getElementById("pages");
+       if(widthView>maxPages)
+            widthView=maxPages;
+       document.getElementById("pages").style.maxWidth=42*widthView+"px";
+       for(p=1;p<=maxPages;p++)
+       {
+           newP=document.createElement("p");
+           newP.innerHTML=""+p;
+           newP.setAttribute("id","page"+p);
+           newP.setAttribute("onclick","goPage(this);");
+           newP.setAttribute("data-id",""+p);
+           newP.className="pagePointer";
+           contPages.appendChild(newP);
+       } 
+       document.getElementById("page1").classList.add("currentPage");
+   }
 </script>

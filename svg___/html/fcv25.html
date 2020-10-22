@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../estiloif.css"/>
+        <meta charset="utf-8"/>
+    </head>
+    <body class="explaning">
+        <h2>Sobreescribiendo Conversación</h2>
+        <p>    
+            Cuando se detecta un mensaje entrante conteniendo un token que activa una inbound rule para detonar una nueva conversación, el switch verifica si ya existe una conversación en curso, si la hay, consulta la IR, específicamente la bandera que determina si se puede sobreescribir la conversación. Si esta bandera se configuró con el valor <em>true</em>, el switch ejecuta el proceso para terminar la conversación en curso y después, inicia el proceso para crear un anueva conversación. En caso de que la badera se haya configurado con el valor <em>false</em>, el switch toma el mensaje y lo inyecta al flujo actual.
+        </p>    
+        <p>
+            <b><em>No se debe configurar la bandera con un valor true para las IR que detonan conversaciones con cualquier palabra. </em></b>
+        </p>
+               
+        <br/>        
+    </body>
+</html>
