@@ -268,7 +268,7 @@
             height: 100%;  
         }
         header h1:first-child{
-            width:25%;
+            width:30%;
             float:left;
             line-height: 55px;
         }
@@ -285,8 +285,12 @@
         }
         #indexContent{
             width:90% !important;
+            background-color: white !important;
         }
         .explaning h2{
             font-size: 1.5rem;
+        }
+        .main-header:last-child{
+            font-size: 0.8em !important;
         }
     }

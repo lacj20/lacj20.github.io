@@ -24,7 +24,7 @@
         </header>
         <nav>   
             <div id="contentTable">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#indexContent">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#indexContent" id="btnTableContent">
                     <i class="material-icons">list</i>
                   </button>
                   <div class="collapse navbar-collapse" id="indexContent">
@@ -67,14 +67,6 @@
    var prefix="";
    var page=null;
    
-   screen.orientation.lock("portrait")
-	.then(function() {
-		alert('Locked');
-	})
-	.catch(function(error) {
-		//alert(error);
-	});
-
    function loadPage(pIdPage)
    {
     
@@ -151,7 +143,7 @@
        while(stack.length>0)stack.pop();
        idPage=obj.getAttribute("id-page");
        loadPage(idPage);
-
+       document.getElementById("btnTableContent").click(); 
    }
    function backPage(obj)
    {
