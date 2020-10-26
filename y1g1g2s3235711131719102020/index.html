@@ -140,6 +140,7 @@
    {
        while(stack.length>0)stack.pop();
        idPage=obj.getAttribute("id-page");
+       document.getElementById("backF").style.display='none';
        loadPage(idPage);
        document.getElementById("btnTableContent").click(); 
    }
