@@ -255,8 +255,8 @@
       }
     @media print, screen and (max-width: 720px)
     {
-        @viewport {
-            orientation: landscape;
+        body{
+            transform: rotate(-90deg);
         }
         header{
             height:60px !important;
