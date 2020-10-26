@@ -217,10 +217,10 @@
    function landScapeOrientation()
    {
         var orientation = (screen.orientation || {}).type || screen.mozOrientation || screen.msOrientation;
-        console.log(orientation);
+        alert(orientation);
         if (orientation === undefined) 
         {
-            console.log('no soportado');
+            alert.log('no soportado');
             return;
         }
         if (orientation !== "landscape-primary") {
