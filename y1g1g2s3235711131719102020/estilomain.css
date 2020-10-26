@@ -32,6 +32,7 @@
     #container-svg{
         padding: 5px;
         height: 100%;
+        margin:0px auto;
     }
     #container-svg svg{
         height: 100%;
@@ -97,20 +98,58 @@
         width: 100%;
         height:50px;
         text-align: right;
-        padding-top: 5px;
         padding-right: 5px;
-        padding-bottom: 5px;
-        position: relative;
+        padding-bottom: 5px;   
         z-index: 3;
         overflow: hidden;
         line-height: 50px;
     }
-    nav div{
+    nav #contentTable{
+        float: right;;
+        text-align: left;
+        padding-left: 5px;
+    }
+    .navbar-toggler{
+        padding:3px !important;
+    }
+    nav #indexContent{
+        height: 80%;
+        width: 50%;
+        background-color: rgba(255,255,255,.9);
+        border-radius: 5px;
+        border:solid gray 1px;
+        position:absolute;
+        right: 5px;
+        margin-top:-10px;
+        z-index: 10;
+        
+        padding:4px;
+        padding-left: 10px;
+    }
+    nav #indexContent li a{
+        line-height: 1rem;
+        display: block;
+        padding:2px;
+        margin-right: 5px;
+    }
+    nav #indexContent li a:hover{
+       background-color: #242f62; 
+       color:white;
+    }
+    nav #listContent{
+        overflow-y: scroll;
+        height: 100%;
+        list-style-type: decimal;
+        padding-left: 25px;
+        font-size: .8rem;
+    }
+
+    nav .navigation{
         float:right;
         height: 40px;
         margin:0px 2px;
     }
-    nav div a{
+    nav .navigation a{
         background-color: black;
         color:white !important;
         text-align: center;
@@ -124,7 +163,7 @@
         font-family: sen;
         font-size: 30px;
     }
-    nav div a:hover{
+    nav .navigation a:hover{
         background-color:#709DCD;
     }
     #next{
@@ -163,13 +202,13 @@
         font-family: montserrat;
         text-align: justify;
     }
-    ul{
-        list-style-type: disc;
-    }
-    ul{
+    
+    .explaning ul{
         list-style-type: disc;
         margin-left: 8px;
+        padding-left: 20px;
     }
+    
     .explaning{
         padding:10px !important;
     }
@@ -198,14 +237,18 @@
         border-bottom: solid midnightblue 2px;   
     }
     
-    #explainHtml::-webkit-scrollbar{
+    #explainHtml::-webkit-scrollbar,
+    #listContent::-webkit-scrollbar{
         width:10px;
     }
-    #explainHtml::-webkit-scrollbar-track {
+    #explainHtml::-webkit-scrollbar-track,
+    #listContent::-webkit-scrollbar-track
+    {
         background-color:#adb5bd;
         border-radius: 20px; 
-      }
-    #explainHtml::-webkit-scrollbar-thumb {
+    }
+    #explainHtml::-webkit-scrollbar-thumb,
+    #listContent::-webkit-scrollbar-thumb {
         background-color:#242f62;   
         border-radius: 20px;       
         border: 1px solid #242f62;   
@@ -239,5 +282,11 @@
         }
         #info,#svg,#explain{
             height: auto;
+        }
+        #indexContent{
+            width:90% !important;
+        }
+        .explaning h2{
+            font-size: 1.5rem;
         }
     }

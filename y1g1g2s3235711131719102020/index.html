@@ -7,6 +7,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="estilomain.css"/>
         
     </head>
@@ -22,26 +23,37 @@
             <div></div>
         </header>
         <nav>   
-            <div>
+            <div id="contentTable">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#indexContent">
+                    <i class="material-icons">list</i>
+                  </button>
+                  <div class="collapse navbar-collapse" id="indexContent">
+                    <ul class="navbar-nav" id="listContent">
+                      
+                    </ul>
+                  </div>  
+            </div>
+            <div class="navigation">
                 <a onclick="next()" id="next">&gt;</a>
             </div>
-            <div>
+            <div class="navigation">
                 <a onclick="prev()" id="prev">&lt;</a>
             </div>
-            <div>
+            <div class="navigation">
                 <a id="backF" style="display: none;" onclick="backPage(this);">&lt;&gt;</a>
             </div>
                 
         </nav>
         <div id="info" class="row">
-            <section id="svg" class="col-6">
-                <div id="container-svg"></div>
-            </section>
+            
             <article id="explain" class="col-6">
                 <div id="explainHtml">
 
                 </div>
             </article>
+            <section id="svg" class="col-6">
+                <div id="container-svg"></div>
+            </section>
             <div style="clear:both;"></div>
         </div>
     </body>
@@ -55,6 +67,14 @@
    var prefix="";
    var page=null;
    
+   screen.orientation.lock("portrait")
+	.then(function() {
+		//alert('Locked');
+	})
+	.catch(function(error) {
+		//alert(error);
+	});
+
    function loadPage(pIdPage)
    {
     
@@ -73,6 +93,9 @@
             document.getElementById("svg").classList.add("col-md-"+page.widthSvgContainer,"col-sm-"+page.widthSvgContainer,"col-12");
             document.getElementById("explain").className="";
             document.getElementById("explain").classList.add("col-md-"+page.widthHtmlContainer,"col-sm-"+page.widthSvgContainer,"col-12");
+            document.getElementById("container-svg").style.width=page.widthSvg+"%";
+            console.log(page)   ;
+            //console.log(document.getElementById("container-svg").style.width);
             btnPrev=document.getElementById("prev");
             btnNext=document.getElementById("next");
             if(page.previousPage==-1)
@@ -123,6 +146,13 @@
     back.style.display="inline-block";
     loadPage(idPage);
    }
+   function goPageFromIndex(obj)
+   {
+       while(stack.length>0)stack.pop();
+       idPage=obj.getAttribute("id-page");
+       loadPage(idPage);
+
+   }
    function backPage(obj)
    {
        npage=obj.getAttribute("id-page");
@@ -151,6 +181,14 @@
                 curPage=0;
                 prefix=data.prefix;
                 loadPage(pages[0].idPage);
+                listContent=document.getElementById("listContent");
+                for(p=0;p<pages.length;p++)
+                {
+                    tem=document.createElement("li");
+                    tem.classList.add("nav-item");
+                    tem.innerHTML="<a class='nav-link' href='#' onclick='goPageFromIndex(this);' id-page='"+ pages[p].idPage+"'>"+pages[p].title+"</a>";
+                    listContent.appendChild(tem);
+                } 
             }
         }
         xmlhttp.open("GET","index.JSON");        
@@ -181,7 +219,6 @@
         xhrh.onload = function(e) 
         {
             containerHtml = document.getElementById("explainHtml");
-            console.log(containerHtml);
             containerHtml.innerHTML=xhrh.responseText;
         }
         xhrh.send();

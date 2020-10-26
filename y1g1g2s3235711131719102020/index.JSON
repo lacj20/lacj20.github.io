@@ -15,7 +15,7 @@
             "idHtml":"1",
             "widthSvgContainer":"8",
             "widthHtmlContainer":"4",
-            "whidthSvg":"100",
+            "widthSvg":"100",
             "nextPage":"2",
             "previousPage":"-1"
         },
@@ -26,7 +26,7 @@
             "idHtml":"2",
             "widthSvgContainer":"7",
             "widthHtmlContainer":"5",
-            "whidthSvg":"80",
+            "widthSvg":"100",
             "nextPage":"3",
             "previousPage":"1"
         },
@@ -37,7 +37,7 @@
             "idHtml":"3",
             "widthSvgContainer":"6",
             "widthHtmlContainer":"6",
-            "whidthSvg":"100",
+            "widthSvg":"100",
             "nextPage":"4",
             "previousPage":"2"
         },
@@ -48,7 +48,7 @@
             "idHtml":"4",
             "widthSvgContainer":"4",
             "widthHtmlContainer":"8",
-            "whidthSvg":"100",
+            "widthSvg":"100",
             "nextPage":"5",
             "previousPage":"3"
         },
@@ -59,7 +59,7 @@
             "idHtml":"5",
             "widthSvgContainer":"6",
             "widthHtmlContainer":"6",
-            "whidthSvg":"70",
+            "widthSvg":"80",
             "nextPage":"6",
             "previousPage":"4"
         },
@@ -70,7 +70,7 @@
             "idHtml":"6",
             "widthSvgContainer":"8",
             "widthHtmlContainer":"4",
-            "whidthSvg":"80",
+            "widthSvg":"100",
             "nextPage":"7",
             "previousPage":"5"
         },
@@ -81,7 +81,7 @@
             "idHtml":"7",
             "widthSvgContainer":"8",
             "widthHtmlContainer":"4",
-            "whidthSvg":"80",
+            "widthSvg":"100",
             "nextPage":"8",
             "previousPage":"6"
         },
@@ -92,7 +92,7 @@
             "idHtml":"8",
             "widthSvgContainer":"8",
             "widthHtmlContainer":"4",
-            "whidthSvg":"90",
+            "widthSvg":"100",
             "nextPage":"9",
             "previousPage":"7"
         },
@@ -103,7 +103,7 @@
             "idHtml":"9",
             "widthSvgContainer":"8",
             "widthHtmlContainer":"4",
-            "whidthSvg":"90",
+            "widthSvg":"100",
             "nextPage":"10",
             "previousPage":"8"
         },
@@ -114,7 +114,7 @@
             "idHtml":"10",
             "widthSvgContainer":"8",
             "widthHtmlContainer":"4",
-            "whidthSvg":"90",
+            "widthSvg":"100",
             "nextPage":"11",
             "previousPage":"9"
         },
@@ -125,7 +125,7 @@
             "idHtml":"11",
             "widthSvgContainer":"8",
             "widthHtmlContainer":"4",
-            "whidthSvg":"90",
+            "widthSvg":"100",
             "nextPage":"12",
             "previousPage":"10"
         },
@@ -136,7 +136,7 @@
             "idHtml":"12",
             "widthSvgContainer":"8",
             "widthHtmlContainer":"4",
-            "whidthSvg":"90",
+            "widthSvg":"100",
             "nextPage":"13",
             "previousPage":"11"
         },
@@ -147,29 +147,29 @@
             "idHtml":"13",
             "widthSvgContainer":"8",
             "widthHtmlContainer":"4",
-            "whidthSvg":"90",
+            "widthSvg":"100",
             "nextPage":"14",
             "previousPage":"12"
         },
         {
             "idPage":"14",
-            "title":"Verificando respuestas de remotos",
+            "title":"Verificando respuestas de remotos [1]",
             "idSvg":"14",
             "idHtml":"14",
             "widthSvgContainer":"8",
             "widthHtmlContainer":"4",
-            "whidthSvg":"100",
+            "widthSvg":"100",
             "nextPage":"15",
             "previousPage":"13"
         },
         {
             "idPage":"15",
-            "title":"Verificando respuesta de remotos",
+            "title":"Verificando respuesta de remotos [2]",
             "idSvg":"14",
             "idHtml":"15",
             "widthSvgContainer":"8",
             "widthHtmlContainer":"4",
-            "whidthSvg":"100",
+            "widthSvg":"100",
             "nextPage":"16",
             "previousPage":"14"
         },
@@ -180,7 +180,7 @@
             "idHtml":"16",
             "widthSvgContainer":"7",
             "widthHtmlContainer":"5",
-            "whidthSvg":"100",
+            "widthSvg":"100",
             "nextPage":"17",
             "previousPage":"15"
         },
@@ -191,7 +191,7 @@
             "idHtml":"17",
             "widthSvgContainer":"8",
             "widthHtmlContainer":"4",
-            "whidthSvg":"100",
+            "widthSvg":"100",
             "nextPage":"18",
             "previousPage":"16"
         },
@@ -202,7 +202,7 @@
             "idHtml":"18",
             "widthSvgContainer":"8",
             "widthHtmlContainer":"4",
-            "whidthSvg":"100",
+            "widthSvg":"100",
             "nextPage":"19",
             "previousPage":"17"
         },
@@ -213,7 +213,7 @@
             "idHtml":"19",
             "widthSvgContainer":"8",
             "widthHtmlContainer":"4",
-            "whidthSvg":"100",
+            "widthSvg":"100",
             "nextPage":"20",
             "previousPage":"18"
         },
@@ -224,7 +224,7 @@
             "idHtml":"20",
             "widthSvgContainer":"8",
             "widthHtmlContainer":"4",
-            "whidthSvg":"100",
+            "widthSvg":"100",
             "nextPage":"21",
             "previousPage":"19"
         },
@@ -235,7 +235,7 @@
             "idHtml":"21",
             "widthSvgContainer":"8",
             "widthHtmlContainer":"4",
-            "whidthSvg":"100",
+            "widthSvg":"100",
             "nextPage":"22",
             "previousPage":"20"
         },
@@ -246,7 +246,7 @@
             "idHtml":"22",
             "widthSvgContainer":"8",
             "widthHtmlContainer":"4",
-            "whidthSvg":"100",
+            "widthSvg":"100",
             "nextPage":"23",
             "previousPage":"21"
         },
@@ -257,7 +257,7 @@
             "idHtml":"23",
             "widthSvgContainer":"8",
             "widthHtmlContainer":"4",
-            "whidthSvg":"100",
+            "widthSvg":"100",
             "nextPage":"24",
             "previousPage":"22"
         },
@@ -268,7 +268,7 @@
             "idHtml":"24",
             "widthSvgContainer":"8",
             "widthHtmlContainer":"4",
-            "whidthSvg":"100",
+            "widthSvg":"100",
             "nextPage":"-1",
             "previousPage":"23"
         },
@@ -279,7 +279,7 @@
             "idHtml":"25",
             "widthSvgContainer":"8",
             "widthHtmlContainer":"4",
-            "whidthSvg":"100",
+            "widthSvg":"100",
             "nextPage":"-1",
             "previousPage":"23"
         }
