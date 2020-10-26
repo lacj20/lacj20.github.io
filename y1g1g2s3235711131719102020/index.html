@@ -86,8 +86,6 @@
             document.getElementById("explain").className="";
             document.getElementById("explain").classList.add("col-md-"+page.widthHtmlContainer,"col-sm-"+page.widthSvgContainer,"col-12");
             document.getElementById("container-svg").style.width=page.widthSvg+"%";
-            console.log(page)   ;
-            //console.log(document.getElementById("container-svg").style.width);
             btnPrev=document.getElementById("prev");
             btnNext=document.getElementById("next");
             if(page.previousPage==-1)
@@ -162,6 +160,7 @@
    function loadSite()
    {
         var xmlhttp = new XMLHttpRequest();
+        landScapeOrientation();
         xmlhttp.onreadystatechange = function()
         {
             if (this.readyState == 4 && this.status == 200)
@@ -214,6 +213,27 @@
             containerHtml.innerHTML=xhrh.responseText;
         }
         xhrh.send();
+   }
+   function landScapeOrientation()
+   {
+        var orientation = (screen.orientation || {}).type || screen.mozOrientation || screen.msOrientation;
+        console.log(orientation);
+        if (orientation === undefined) 
+        {
+            console.log('no soportado');
+            return;
+        }
+        if (orientation !== "landscape-primary") {
+            screen.orientation.lock("landscape");
+            //screen.orientation.lock("portrait-primary");    
+        console.log("That looks good.");
+        } else if (orientation === "landscape-secondary") {
+        console.log("Mmmh... the screen is upside down!");
+        } else if (orientation === "portrait-secondary" || orientation === "portrait-primary") {
+        console.log("Mmmh... you should rotate your device to landscape");
+        } else if (orientation === undefined) {
+        console.log("The orientation API isn't supported in this browser :("); 
+        }
    }
    /*function pagination()
    {      
