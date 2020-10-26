@@ -1,0 +1,243 @@
+    *{
+        margin:0px;
+        padding:0px;
+        box-sizing: border-box !important;
+        font-family: montserrat;
+    }
+    @font-face{
+        font-family: montserrat;
+        src:url('fonts/Montserrat-Regular.ttf');
+    }
+    @font-face{
+        font-family: montserrat-sb;
+        src:url('fonts/Montserrat-SemiBold.ttf');
+    }
+    @font-face{
+        font-family: sen;
+        src:url('fonts/Sen-Regular.ttf');
+    }
+    html,body{
+        width:100%;
+        height: 100%;       
+    }
+    #container-svg,#explainHtml{
+        border:none;
+        width:100%;
+        height: 100%;
+        
+    }
+    #explainHtml{
+        overflow-y: auto;
+    }
+    #container-svg{
+        padding: 5px;
+        height: 100%;
+    }
+    #container-svg svg{
+        height: 100%;
+        width: 100%;
+    }
+    #info{
+        height: 80%;
+        position: relative;
+        z-index: 1;
+        margin:0px;
+    }
+    #svg{
+        height: 100%;
+        text-align: center;
+        position: relative;
+        padding-top: 10px;;
+    }
+    #explain{
+        height: 100%;
+        position: relative;
+        padding: 3px;
+    }
+    header{
+        height:80px !important;
+        background-color:#242f62;
+        color:white;
+    }
+    header div{
+        clear:both;
+        margin:0px;
+        padding: 0px;
+    }
+    header h1{
+        font-family: montserrat-sb !important;
+        font-size: 2em;
+        text-align: right;
+        padding: 10px !important;
+        height: 100%;  
+    }
+    header h1:first-child{
+        width:15%;
+        float:left;
+        line-height: 55px;
+    }
+    header h1:first-child img{
+        height: 60px;
+    }
+    header h1:last-child{
+        width:85%;
+        float:right;
+    }
+    .main-header{
+        display: block;
+        margin:0px;
+        padding:0px;
+        font-weight: bold;
+    }
+    .main-header:last-child{
+        font-size: 0.6em !important;
+    }
+    
+    nav{
+        width: 100%;
+        height:50px;
+        text-align: right;
+        padding-top: 5px;
+        padding-right: 5px;
+        padding-bottom: 5px;
+        position: relative;
+        z-index: 3;
+        overflow: hidden;
+        line-height: 50px;
+    }
+    nav div{
+        float:right;
+        height: 40px;
+        margin:0px 2px;
+    }
+    nav div a{
+        background-color: black;
+        color:white !important;
+        text-align: center;
+        cursor: pointer;
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        line-height: 40px;
+        padding: 0px;
+        font-family: sen;
+        font-size: 30px;
+    }
+    nav div a:hover{
+        background-color:#709DCD;
+    }
+    #next{
+        padding-left: 3px;
+    }
+    #prev{
+        padding-right: 0px;
+    }
+    .awhite{
+        fill:white;
+    }
+    .pagePointer{
+        width:40px;
+        height:40px;
+        border-radius: 20px;
+        background-color: black;
+        margin:5px 1px 5px 1px;
+        color:white;
+        text-align: center;
+        line-height: 40px;
+        cursor: pointer;
+        display: inline-block;
+        text-align: center;
+    }
+    .currentPage{
+        background-color:#242f62;
+    }
+    #pages{
+        max-width: 210px;
+    }
+    #pages p:hover{
+        background-color:#709DCD;
+    }
+
+    p{
+        font-family: montserrat;
+        text-align: justify;
+    }
+    ul{
+        list-style-type: disc;
+    }
+    ul{
+        list-style-type: disc;
+        margin-left: 8px;
+    }
+    .explaning{
+        padding:10px !important;
+    }
+    .explaning h2{
+        font-family: montserrat-sb;
+    }
+    
+    table{
+        border-collapse: collapse;
+        width: 100%;
+    }
+    th,td{
+        font-size: 0.85em;
+        text-align: justify;
+        padding:5px 3px;
+    }
+    tr:nth-child(odd)
+    {
+        background-color: aliceblue;
+    }
+    tr:first-child{
+        background-color:midnightblue;
+        color:white;
+    }
+    tr:last-child{
+        border-bottom: solid midnightblue 2px;   
+    }
+    
+    #explainHtml::-webkit-scrollbar{
+        width:10px;
+    }
+    #explainHtml::-webkit-scrollbar-track {
+        background-color:#adb5bd;
+        border-radius: 20px; 
+      }
+    #explainHtml::-webkit-scrollbar-thumb {
+        background-color:#242f62;   
+        border-radius: 20px;       
+        border: 1px solid #242f62;   
+      }
+    @media print, screen and (max-width: 720px)
+    {
+        header{
+            height:60px !important;
+            background-color:#242f62;
+            color:white;
+        }
+        header h1{
+            font-family: montserrat-sb !important;
+            font-size: 1em;
+            text-align: right;
+            padding: 3px !important;
+            height: 100%;  
+        }
+        header h1:first-child{
+            width:25%;
+            float:left;
+            line-height: 55px;
+        }
+        header h1:first-child img{
+            height: 60px;
+            width: 100%;
+        }
+        header h1:last-child{
+            width:85%;
+            float:right;
+        }
+        #info,#svg,#explain{
+            height: auto;
+        }
+    }
