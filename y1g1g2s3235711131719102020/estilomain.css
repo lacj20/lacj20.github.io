@@ -255,9 +255,7 @@
       }
     @media print, screen and (max-width: 720px)
     {
-        body{
-            transform: rotate(-90deg);
-        }
+        
         header{
             height:60px !important;
             background-color:#242f62;

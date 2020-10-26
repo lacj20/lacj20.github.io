@@ -160,7 +160,7 @@
    function loadSite()
    {
         var xmlhttp = new XMLHttpRequest();
-        landScapeOrientation();
+   
         xmlhttp.onreadystatechange = function()
         {
             if (this.readyState == 4 && this.status == 200)
@@ -214,27 +214,7 @@
         }
         xhrh.send();
    }
-   function landScapeOrientation()
-   {
-        var orientation = (screen.orientation || {}).type || screen.mozOrientation || screen.msOrientation;
-        alert(orientation);
-        if (orientation === undefined) 
-        {
-            alert.log('no soportado');
-            return;
-        }
-        if (orientation !== "landscape-primary") {
-            screen.orientation.lock("landscape");
-            //screen.orientation.lock("portrait-primary");    
-        console.log("That looks good.");
-        } else if (orientation === "landscape-secondary") {
-        console.log("Mmmh... the screen is upside down!");
-        } else if (orientation === "portrait-secondary" || orientation === "portrait-primary") {
-        console.log("Mmmh... you should rotate your device to landscape");
-        } else if (orientation === undefined) {
-        console.log("The orientation API isn't supported in this browser :("); 
-        }
-   }
+   
    /*function pagination()
    {      
        contPages=document.getElementById("pages");
