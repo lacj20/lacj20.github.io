@@ -255,6 +255,9 @@
       }
     @media print, screen and (max-width: 720px)
     {
+        @viewport {
+            orientation: landscape;
+        }
         header{
             height:60px !important;
             background-color:#242f62;
