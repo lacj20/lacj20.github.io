@@ -2,11 +2,11 @@
         <h2>Verificando respuestas de remotos</h2>
         
         <p>
-            Cuando los remotos responden a la invitación con un código http=200, el switch interpreta que ese remoto aceptó la invitación y lo agrega a la conversación, esto sucede para cada remoto que acepta la invitación, en caso de que el código de respuesta no sea 200, significa que el remoto no pudo integrarse a la conversación, entonces el switch verifica en la IR si el remoto que rechazó la invitación es requerido, en caso de serlo la conversación termina. 
+            Cuando los remotos responden a la invitación con un código http=200, el switch interpreta que ese remoto aceptó la invitación y lo agrega a la conversación, esto sucede para cada remoto que acepta la invitación. En caso de que el código de respuesta no sea 200, significa que el remoto no pudo integrarse a la conversación, entonces, el switch verifica en la inbound rule si el remoto que rechazó la invitación es requerido, si lo es, la conversación termina. 
             
             
         </p>
-        <p><b><em>importante recordar que cuando un remoto en una IR se configura como requerido, la conversación no puede iniciar si ese remoto no acepta la invitación</em></b>.
+        <p><b><em>importante recordar que cuando un remoto en una inbound rule se configura como requerido, la conversación no puede iniciar si ese remoto no acepta la invitación</em></b>.
         </p>
         <p>
             Si todos los remotos requeridos aceptaron la invitación y no hubo ninguna incidencia en el proceso, la conversación se creó correctamente y todos los participantes están conectados. A partir de este punto se desarrolla el intercambio de mensajes hasta que la conversación termina.
