@@ -1,0 +1,237 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="estilomain.css"/>
+        
+    </head>
+    <body onload="loadSite();">
+        <header>
+            <h1>
+                <img src="svg/logo.svg"/>
+            </h1>
+            <h1>
+                <span class="main-header">ARQUITECTURA YGGDRASIL</span>
+                <span class="main-header"> &lt;Ciclo de vida conversacional&gt;</span>
+            </h1>         
+            <div></div>
+        </header>
+        <nav>   
+            <div id="contentTable">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#indexContent" id="btnTableContent">
+                    <i class="material-icons">list</i>
+                  </button>
+                  <div class="collapse navbar-collapse" id="indexContent">
+                    <ul class="navbar-nav" id="listContent">
+                      
+                    </ul>
+                  </div>  
+            </div>
+            <div class="navigation">
+                <a onclick="next()" id="next">&gt;</a>
+            </div>
+            <div class="navigation">
+                <a onclick="prev()" id="prev">&lt;</a>
+            </div>
+            <div class="navigation">
+                <a id="backF" style="display: none;" onclick="backPage(this);">&lt;&gt;</a>
+            </div>
+                
+        </nav>
+        <div id="info" class="row">
+            
+            <article id="explain" class="col-6">
+                <div id="explainHtml">
+
+                </div>
+            </article>
+            <section id="svg" class="col-6">
+                <div id="container-svg"></div>
+            </section>
+            <div style="clear:both;"></div>
+        </div>
+    </body>
+    
+</html>
+ <script type="text/javascript">
+   var maxPages=25;
+   var curPage=0;
+   var prevPage=0;
+   var nextPage=0;
+   var prefix="";
+   var page=null;
+   
+   function loadPage(pIdPage)
+   {
+    
+            curPage=navigation.get(pIdPage);
+            if(typeof curPage==='undefined')
+            {
+                alert("ocurrió un error al tratar de cargar el artículo");
+                return;
+            }
+            page=pages[curPage];
+            nextPage=navigation.get(page.nextPage);
+            prevPage=navigation.get(page.previousPage);
+            loadSvg("svg/"+prefix+page.idPage+".svg");
+            loadHtml("html/"+prefix+page.idHtml+".html");
+            document.getElementById("svg").className="";
+            document.getElementById("svg").classList.add("col-md-"+page.widthSvgContainer,"col-sm-"+page.widthSvgContainer,"col-12");
+            document.getElementById("explain").className="";
+            document.getElementById("explain").classList.add("col-md-"+page.widthHtmlContainer,"col-sm-"+page.widthSvgContainer,"col-12");
+            document.getElementById("container-svg").style.width=page.widthSvg+"%";
+            btnPrev=document.getElementById("prev");
+            btnNext=document.getElementById("next");
+            if(page.previousPage==-1)
+            {
+                btnPrev.style.display="none";
+                btnPrev.setAttribute("alt","");
+                btnPrev.setAttribute("title","");
+            }
+            else
+            {
+                btnPrev.style.display="inline-block";
+                if(typeof prevPage!=='undefined')
+                    {
+                        btnPrev.setAttribute("alt",pages[prevPage].title);
+                        btnPrev.setAttribute("title",pages[prevPage].title);
+                    }    
+            }
+            if(page.nextPage==-1)
+            {
+                btnNext.style.display="none";
+                btnNext.setAttribute("alt","");
+                btnNext.setAttribute("title","");
+            }
+            else
+            {
+                btnNext.style.display="inline-block";
+                if(typeof nextPage!=='undefined')
+                    {
+                        btnNext.setAttribute("alt",pages[nextPage].title);
+                        btnNext.setAttribute("title",pages[nextPage].title);
+                    }    
+            }
+
+   }
+   function next(){
+        document.getElementById("backF").style.display='none';
+        loadPage(page.nextPage);
+   }
+   function prev(){
+        document.getElementById("backF").style.display='none';
+        loadPage(page.previousPage);
+   }
+   function goPage(idPage)
+   {
+    back=document.getElementById("backF");
+    stack.push(page.idPage);
+    back.setAttribute("id-page",page.idPage);
+    back.style.display="inline-block";
+    loadPage(idPage);
+   }
+   function goPageFromIndex(obj)
+   {
+       while(stack.length>0)stack.pop();
+       idPage=obj.getAttribute("id-page");
+       document.getElementById("backF").style.display='none';
+       loadPage(idPage);
+       document.getElementById("btnTableContent").click(); 
+   }
+   function backPage(obj)
+   {
+       npage=obj.getAttribute("id-page");
+       stack.pop();
+       if(stack.length>0)
+            obj.setAttribute("id-page",stack[stack.length-1]);
+       else 
+            obj.style.display='none';
+       loadPage(npage);
+
+   }
+   var navigation=new Map();
+   var pages=new Array();
+   var stack=[];
+   function loadSite()
+   {
+        var xmlhttp = new XMLHttpRequest();
+   
+        xmlhttp.onreadystatechange = function()
+        {
+            if (this.readyState == 4 && this.status == 200)
+            {
+                var data = JSON.parse(this.responseText);
+                pages=data.pages;
+                for(p=0;p<pages.length;p++)
+                    navigation.set(pages[p].idPage,p);
+                curPage=0;
+                prefix=data.prefix;
+                loadPage(pages[0].idPage);
+                listContent=document.getElementById("listContent");
+                for(p=0;p<pages.length;p++)
+                {
+                    tem=document.createElement("li");
+                    tem.classList.add("nav-item");
+                    tem.innerHTML="<a class='nav-link' href='#' onclick='goPageFromIndex(this);' id-page='"+ pages[p].idPage+"'>"+pages[p].title+"</a>";
+                    listContent.appendChild(tem);
+                } 
+            }
+        }
+        xmlhttp.open("GET","index.JSON");        
+        xmlhttp.send();
+   }
+   
+   function loadSvg(file)
+   {
+        xhr = new XMLHttpRequest();
+        xhr.open("GET",file);
+        xhr.overrideMimeType("image/svg+xml");
+        xhr.onload = function(e) 
+        {
+            containerSvg = document.getElementById("container-svg");
+            while (containerSvg.firstChild) 
+            {
+                containerSvg.removeChild(containerSvg.lastChild);
+            }
+            containerSvg.appendChild(xhr.responseXML.documentElement);
+        }
+        xhr.send("");
+   }
+   function loadHtml(file)
+   {
+        xhrh = new XMLHttpRequest();
+        xhrh.open("GET",file,true);
+        xhrh.overrideMimeType("text/html");
+        xhrh.onload = function(e) 
+        {
+            containerHtml = document.getElementById("explainHtml");
+            containerHtml.innerHTML=xhrh.responseText;
+        }
+        xhrh.send();
+   }
+   
+   /*function pagination()
+   {      
+       contPages=document.getElementById("pages");
+       if(widthView>maxPages)
+            widthView=maxPages;
+       document.getElementById("pages").style.maxWidth=42*widthView+"px";
+       for(p=1;p<=maxPages;p++)
+       {
+           newP=document.createElement("p");
+           newP.innerHTML=""+p;
+           newP.setAttribute("id","page"+p);
+           newP.setAttribute("onclick","goPage(this);");
+           newP.setAttribute("data-id",""+p);
+           newP.className="pagePointer";
+           contPages.appendChild(newP);
+       } 
+       document.getElementById("page1").classList.add("currentPage");
+   }*/
+</script>

@@ -1,0 +1,36 @@
+<style>
+    td:first-child{
+        font-weight: bold !important;
+        width: 15%;
+    }
+</style>
+
+<div class="explaning">
+        <h2>Terminando la conversación</h2>
+        <p>    
+            Para terminar la conversación, el switch envía mensajes <b>SWITCHBYE</b> a todos los participantes, este tipo de mensaje le informa a los endpoints que la conversación ha finalizado, contiene datos como el id de la conversación y la URI del remotó que terminó su participación. La respuesta esperada para este mensaje es un objeto que contiene el <em><b>statusCode</b></em> según el estandar HTTP. Los código de respuesta soportados son:
+        </p>    
+        <table>
+            <tr>
+                <th>Código</th>
+                <th>Descripción</th>
+            </tr>
+            <tr>
+                <td>200</td>
+                <td>OK: Indica que los recursos ocupados fueron liberados correctamente.
+            </tr>
+            <tr>
+                <td>400</td>
+                <td>BAD REQUEST: La petición trae un JSON malformado o con parámetros insuficientes.
+            </tr>
+            <tr>
+                <td>404</td>
+                <td>NOT FOUND: El endpoint no conoce el URI del remoto.
+            </tr>
+            <tr>
+                <td>500</td>
+                <td>INTERNAL ERROR: El endpoint presentó un error al tratar de seguir el flujo de proceso de un <b>BYE</b>. Es decisión del switch reintentar la solicitud o no.</td>
+            </tr>
+    </table>       
+        <br/>        
+</div>
